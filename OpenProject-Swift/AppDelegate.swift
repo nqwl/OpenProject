@@ -17,10 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         GDPerformanceMonitor.sharedInstance.startMonitoring { (textLabel) in
-            textLabel?.backgroundColor = .orange
+            textLabel?.backgroundColor = .black
             textLabel?.textColor = .white
-            textLabel?.layer.borderColor = UIColor.yellow.cgColor
+            textLabel?.layer.borderColor = UIColor.black.cgColor
         }
+
         GDPerformanceMonitor.sharedInstance.appVersionHidden = true
         GDPerformanceMonitor.sharedInstance.deviceVersionHidden = true
 

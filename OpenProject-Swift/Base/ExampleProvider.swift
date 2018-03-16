@@ -25,7 +25,7 @@ enum ExampleProvider {
         v5.tabBarItem = UITabBarItem.init(title: "Me", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
         
         tabBarController.tabBar.shadowImage = nil
-            
+
         tabBarController.viewControllers = [v1, v2, v3, v4, v5]
         
         return tabBarController
