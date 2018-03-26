@@ -11,14 +11,13 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var contentTableView: UITableView!
-    fileprivate lazy var dataArray : [String] = ["简单的瀑布流"]
+    fileprivate lazy var dataArray : [String] = ["简单的瀑布流","雪花粒子动画效果"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         getData()
         print("\(UIScreen.main.bounds)+\(self.view.bounds)")
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,13 +42,25 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:MainCell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
+        cell.textLabel?.font = kAdaptedFontSize(x: 14)
         cell.textLabel?.text = dataArray[indexPath.row]
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let waterflowVC = WaterFlowViewController()
-        self.navigationController?.pushViewController(waterflowVC, animated: true)
+        switch indexPath.row {
+        case 0:
+            let waterflowVC = WaterFlowViewController()
+            self.navigationController?.pushViewController(waterflowVC, animated: true)
+            break
+        case 1:
+            let emitterVC = EmitterViewController()
+            self.navigationController?.pushViewController(emitterVC, animated: true)
+            break
+        default:
+            break
+        }
+
     }
 }

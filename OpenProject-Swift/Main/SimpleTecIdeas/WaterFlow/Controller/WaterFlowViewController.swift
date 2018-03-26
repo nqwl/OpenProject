@@ -32,7 +32,6 @@ class WaterFlowViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        hidesBottomBarWhenPushed = false
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
