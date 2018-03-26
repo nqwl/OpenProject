@@ -1,15 +1,14 @@
 //
-//  MsgViewController.swift
+//  WaterFlowViewController.swift
 //  OpenProject-Swift
 //
-//  Created by 亲点 on 2018/3/6.
+//  Created by 亲点 on 2018/3/16.
 //  Copyright © 2018年 陈辉. All rights reserved.
 //
 
 import UIKit
-//美女 性感
-//http://image.baidu.com/wisebrowse/data?tag1=%E7%BE%8E%E5%A5%B3&tag2=%E6%80%A7%E6%84%9F&pn=0&rn=60
-class MsgViewController: UIViewController {
+
+class WaterFlowViewController: UIViewController {
 
     fileprivate lazy var contentCollectionView : UICollectionView =  {
         let  layout = NqwlWaterFlowLayout()
@@ -17,8 +16,8 @@ class MsgViewController: UIViewController {
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         layout.dataSource = self
-        
-        let collectionView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH - kNavibarH), collectionViewLayout: layout)
+
+        let collectionView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH), collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
 
@@ -31,22 +30,31 @@ class MsgViewController: UIViewController {
         setupUI()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hidesBottomBarWhenPushed = false
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
-extension MsgViewController : NqwlWaterFlowLayoutDataSource {
+extension WaterFlowViewController : NqwlWaterFlowLayoutDataSource {
     func numberOfCols(_ waterfallLaout: NqwlWaterFlowLayout) -> Int {
-         return 2
+        return 4
     }
     func waterfall(_ waterfallLaout: NqwlWaterFlowLayout, item: Int) -> CGFloat {
         return CGFloat(arc4random_uniform(150)+100)
     }
 }
 
-extension MsgViewController {
+extension WaterFlowViewController {
     fileprivate func setupUI() {
         self.view.addSubview(contentCollectionView)
         contentCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
@@ -54,7 +62,7 @@ extension MsgViewController {
     }
 }
 
-extension MsgViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension WaterFlowViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
@@ -67,6 +75,8 @@ extension MsgViewController: UICollectionViewDataSource, UICollectionViewDelegat
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
     }
 }
+
 

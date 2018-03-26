@@ -12,17 +12,53 @@ class CHBaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appearance = UIBarButtonItem.appearance()
-        appearance.setBackButtonTitlePositionAdjustment(UIOffset.init(horizontal: 0.0, vertical: -60), for: .default)
-        self.navigationBar.isTranslucent = true
-        self.navigationBar.barTintColor = UIColor.init(red: 250/255.0, green: 250/255.0, blue: 250/255.0, alpha: 0.8)
-        #if swift(>=4.0)
-            self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.init(red: 38/255.0, green: 38/255.0, blue: 38/255.0, alpha: 1.0), NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16.0)]
-        #elseif swift(>=3.0)
-            self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.init(red: 38/255.0, green: 38/255.0, blue: 38/255.0, alpha: 1.0), NSFontAttributeName: UIFont.systemFont(ofSize: 16.0)];
-        #endif
-        self.navigationBar.tintColor = UIColor.init(red: 38/255.0, green: 38/255.0, blue: 38/255.0, alpha: 1.0)
-        self.navigationItem.title = "Example"
+        //使用runtime，打印手势中所有属性
+//        var count : UInt32 = 0
+//        let ivas = class_copyIvarList(UIGestureRecognizer.self, &count)!
+//        for i in 0..<count {
+//            let nameP = ivar_getName(ivas[Int(i)])!
+//            let name = String.init(cString: nameP)
+//            print(name)
+//        }
+        guard  let  targets = interactivePopGestureRecognizer?.value(forKey: "_targets") as? [NSObject] else { return }
+        let targetObj = targets[0]
+        print(targetObj)
+        let target = targetObj.value(forKey: "target")
+        let action = Selector(("handleNavigationTransition:"))
+        let panGes = UIPanGestureRecognizer.init(target: target , action:action)
+        view.addGestureRecognizer(panGes)
+
+        // 设置导航栏样式
+        navigationBar.setBackgroundImage(UIImage.color(kThemeWhiteColor!), for: UIBarPosition.any, barMetrics: .default)
+        navigationBar.shadowImage = UIImage()
+
+        // 标题样式
+        let bar = UINavigationBar.appearance()
+        bar.titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor : UIColor.black,
+            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 18)
+        ]
+
+        // 设置返回按钮的样式
+        navigationBar.tintColor = kThemeBlackColor  // 设置返回标识器的颜色
+        let barItem = UIBarButtonItem.appearance()
+        barItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : kThemeBlackColor!], for: .normal)  // 返回按钮文字样式
+    }
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        viewController.hidesBottomBarWhenPushed = true
+        super.pushViewController(viewController, animated: true)
+        viewController.hidesBottomBarWhenPushed = false
     }
 
 }
+
+// MARK:- 事件 (部分页面失效)
+extension CHBaseNavigationController {
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        // 注销 键盘
+        view.endEditing(true)
+    }
+}
+

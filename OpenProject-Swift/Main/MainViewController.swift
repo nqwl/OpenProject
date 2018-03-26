@@ -7,17 +7,18 @@
 //
 
 import UIKit
-//美女 性感
-//http://image.baidu.com/wisebrowse/data?tag1=%E7%BE%8E%E5%A5%B3&tag2=%E6%80%A7%E6%84%9F&pn=0&rn=60
+
 class MainViewController: UIViewController {
 
     @IBOutlet weak var contentTableView: UITableView!
-    fileprivate lazy var dataArray : NSMutableArray = NSMutableArray()
+    fileprivate lazy var dataArray : [String] = ["简单的瀑布流"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         getData()
+        print("\(UIScreen.main.bounds)+\(self.view.bounds)")
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,19 +35,21 @@ extension MainViewController {
     fileprivate func getData() {
 
     }
-
 }
 extension MainViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dataArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:MainCell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
+        cell.textLabel?.text = dataArray[indexPath.row]
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let waterflowVC = WaterFlowViewController()
+        self.navigationController?.pushViewController(waterflowVC, animated: true)
     }
 }
