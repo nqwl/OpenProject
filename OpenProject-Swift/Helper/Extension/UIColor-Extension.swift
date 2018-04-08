@@ -43,6 +43,19 @@ extension UIColor {
 
         self.init(r: CGFloat(r), g: CGFloat(g), b: CGFloat(b))
     }
-
+    class func randomColor() -> UIColor {
+        return UIColor(r: CGFloat(arc4random_uniform(256)), g: CGFloat(arc4random_uniform(256)), b: CGFloat(arc4random_uniform(256)))
+    }
+    class func getDeltaRGB(firstColor:UIColor,secondColor:UIColor) -> (CGFloat,CGFloat,CGFloat) {
+        let firstCmps = firstColor.getRGB()
+        let secondCmps = secondColor.getRGB()
+        return (firstCmps.0 - secondCmps.0,firstCmps.1 - secondCmps.1,firstCmps.2 - secondCmps.2)
+    }
+    func getRGB() -> (CGFloat,CGFloat,CGFloat) {
+        guard let cmps = cgColor.components else {
+            fatalError("请通过rgb方式输入颜色")
+        }
+        return (cmps[0] * 255,cmps[1] * 255,cmps[2] * 255)
+    }
 
 }
