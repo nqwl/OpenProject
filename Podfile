@@ -22,6 +22,7 @@ target 'OpenProject-Swift' do
 
     pod 'ObjectMapper', '~> 3.1.0'
     pod 'Kingfisher', '~> 4.6.2'
+    pod 'Bugly', '~> 2.5.0'
 
 end
 target 'OpenProject-SwiftTests' do

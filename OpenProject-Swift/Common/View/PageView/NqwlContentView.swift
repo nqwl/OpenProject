@@ -12,122 +12,181 @@ import UIKit
     1> 在方法和其他的标识符有歧义(重名)
     2> 在闭包(block)中self.也不能省略
  */
-protocol NqwlContentViewDelegate : class {
-    func contentView(_ contentView : NqwlContentView,targetIndex:Int)
-    func contentView(_ contentView : NqwlContentView,targetIndex:Int, progress:CGFloat)
+import UIKit
 
+@objc protocol NqwlContentViewDelegate : class {
+    func contentView(_ contentView : NqwlContentView, progress : CGFloat, sourceIndex : Int, targetIndex : Int)
+
+    @objc optional func contentViewEndScroll(_ contentView : NqwlContentView)
 }
 
-private let kContentCellID = "NqwlContentCell"
+private let kContentCellID = "kContentCellID"
+
 class NqwlContentView: UIView {
+
+    // MARK: 对外属性
     weak var delegate : NqwlContentViewDelegate?
 
-    fileprivate var childVCs : [UIViewController]
-    fileprivate var parentVC : UIViewController
+    // MARK: 定义属性
+    fileprivate var childVcs : [UIViewController]!
+    fileprivate weak var parentVc : UIViewController!
+    fileprivate var isForbidScrollDelegate : Bool = false
     fileprivate var startOffsetX : CGFloat = 0
 
-    fileprivate lazy  var collectionView : UICollectionView = {
+    // MARK: 控件属性
+    fileprivate lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = self.bounds.size
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
-        
-        let collectionView = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
-        collectionView.showsHorizontalScrollIndicator = false
 
+        let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
+        collectionView.scrollsToTop = false
+        collectionView.bounces = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.frame = self.bounds
+        collectionView.isPagingEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kContentCellID)
-        collectionView.isPagingEnabled = true
-        collectionView.bounces = false
-        //点击状态栏自动滚动到顶部，如果有n个(2个及以上)，那么这种自动滚动到顶部的效果就都不会出现，只有设置其中n-1个的scrollsToTop为false，才能实现剩下一个效果
-        collectionView.scrollsToTop = false
+        collectionView.backgroundColor = UIColor.clear
+
         return collectionView
     }()
-    init(frame: CGRect, childVCs: [UIViewController], parentVC: UIViewController) {
-        self.childVCs = childVCs
-        self.parentVC = parentVC
+
+    // MARK: 构造函数
+    init(frame: CGRect, childVcs : [UIViewController], parentViewController : UIViewController) {
         super.init(frame: frame)
+
+        self.childVcs = childVcs
+        self.parentVc = parentViewController
+
         setupUI()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
+
+
+// MARK:- 设置界面内容
 extension NqwlContentView {
     fileprivate func setupUI() {
-        for childVC in childVCs {
-            parentVC.addChildViewController(childVC)
+        // 1.将所有的控制器添加到父控制器中
+        for vc in childVcs {
+            parentVc.addChildViewController(vc)
         }
+
+        // 2.添加UICollectionView
         addSubview(collectionView)
     }
 }
-// MARK:- collection view delegate
-extension NqwlContentView : UICollectionViewDelegate,UICollectionViewDataSource {
+
+
+// MARK:- 设置UICollectionView的数据源
+extension NqwlContentView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return childVCs.count
+        return childVcs.count
     }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // 1.获取Cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kContentCellID, for: indexPath)
+
+        // 2.设置cell的内容
         for subview in cell.contentView.subviews {
             subview.removeFromSuperview()
         }
-        let childVC = self.childVCs[indexPath.row]
-        childVC.view.frame = cell.contentView.bounds
-        cell.contentView.addSubview(childVC.view)
-        return cell
-    }
 
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        contentEndScroll()
-    }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if decelerate {
-            contentEndScroll()
-        }
-    }
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        startOffsetX = scrollView.contentOffset.x
-    }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard startOffsetX != scrollView.contentOffset.x else {
-            return
-        }
-        var targetIndex = 0
-        var progress : CGFloat = 0
-        let currentIndex = Int(startOffsetX/scrollView.bounds.width)
-        if startOffsetX < scrollView.contentOffset.x {
-            //手指左滑动
-            targetIndex = currentIndex + 1
-            if targetIndex > (childVCs.count - 1) {
-                targetIndex = (childVCs.count - 1)
-            }
-            progress = (scrollView.contentOffset.x - startOffsetX)/scrollView.bounds.width
-        }else {
-            //手指右滑动
-            targetIndex = currentIndex - 1
-            if targetIndex < 0 {
-                targetIndex = 0
-            }
-            progress = (startOffsetX - scrollView.contentOffset.x)/scrollView.bounds.width
-        }
-        delegate?.contentView(self, targetIndex: targetIndex, progress: progress)
-    }
-    private func contentEndScroll() {
-        let currentInde = Int(collectionView.contentOffset.x / collectionView.bounds.width)
-        delegate?.contentView(self, targetIndex: currentInde)
+        let childVc = childVcs[indexPath.item]
+        childVc.view.frame = cell.contentView.bounds
+        cell.contentView.addSubview(childVc.view)
+
+        return cell
     }
 }
 
 
+// MARK:- 设置UICollectionView的代理
+extension NqwlContentView : UICollectionViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
 
-// MARK:- 遵守NqwlTitleViewDelegate
-extension NqwlContentView : NqwlTitleViewDelegate {
-    func titleView(_ titleView: NqwlTitleView, tagetIndex: Int) {
-        let indexPath = IndexPath(item: tagetIndex, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+        isForbidScrollDelegate = false
+
+        startOffsetX = scrollView.contentOffset.x
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 0.判断是否是点击事件
+        if isForbidScrollDelegate { return }
+
+        // 1.定义获取需要的数据
+        var progress : CGFloat = 0
+        var sourceIndex : Int = 0
+        var targetIndex : Int = 0
+
+        // 2.判断是左滑还是右滑
+        let currentOffsetX = scrollView.contentOffset.x
+        let scrollViewW = scrollView.bounds.width
+        if currentOffsetX > startOffsetX { // 左滑
+            // 1.计算progress
+            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW)
+
+            // 2.计算sourceIndex
+            sourceIndex = Int(currentOffsetX / scrollViewW)
+
+            // 3.计算targetIndex
+            targetIndex = sourceIndex + 1
+            if targetIndex >= childVcs.count {
+                targetIndex = childVcs.count - 1
+            }
+
+            // 4.如果完全划过去
+            if currentOffsetX - startOffsetX == scrollViewW {
+                progress = 1
+                targetIndex = sourceIndex
+            }
+        } else { // 右滑
+            // 1.计算progress
+            progress = 1 - (currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW))
+
+            // 2.计算targetIndex
+            targetIndex = Int(currentOffsetX / scrollViewW)
+
+            // 3.计算sourceIndex
+            sourceIndex = targetIndex + 1
+            if sourceIndex >= childVcs.count {
+                sourceIndex = childVcs.count - 1
+            }
+        }
+
+        // 3.将progress/sourceIndex/targetIndex传递给titleView
+        delegate?.contentView(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        delegate?.contentViewEndScroll?(self)
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            delegate?.contentViewEndScroll?(self)
+        }
+    }
+}
+
+// MARK:- 对外暴露的方法
+extension NqwlContentView {
+    func setCurrentIndex(_ currentIndex : Int) {
+
+        // 1.记录需要进制执行代理方法
+        isForbidScrollDelegate = true
+
+        // 2.滚动正确的位置
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.width
+        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
     }
 }

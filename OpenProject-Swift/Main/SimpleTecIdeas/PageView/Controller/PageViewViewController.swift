@@ -14,7 +14,7 @@ class PageViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let titles = ["游戏","娱乐娱乐娱乐娱乐娱乐娱乐娱乐","财经","体育","颜值","体娱乐娱乐娱乐娱乐娱乐娱乐育","颜值","体育","颜值"]
+        let titles = ["精选","爱看","王牌","斗罗大陆","动漫","电影","综艺","电视剧","小说"]
         var childVCs = [UIViewController]()
         for _ in 0 ..< titles.count {
             let vc = UIViewController()
@@ -25,7 +25,15 @@ class PageViewViewController: UIViewController {
         let style = NqwlTitleStyle()
         style.titleHeight = 44
         style.isScrollEnable = true
-        let pageView = NqwlPageView.init(frame: UIScreen.main.bounds, titles: titles, childVCs: childVCs, parentVC: self ,style: style)
+        style.isShowCover = true
+        style.isShowBottomLine = true
+        style.isNeedScale = true
+        let layout = NqwlPageCollectionViewLaout()
+        layout.sectionInset = UIEdgeInsetsMake(10, 20, 30, 40)
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 20
+
+        let pageView = NqwlPageView.init(frame: UIScreen.main.bounds, titles: titles, style: style, childVcs: childVCs, parentVc: self)
         view.addSubview(pageView)
         // Do any additional setup after loading the view.
     }

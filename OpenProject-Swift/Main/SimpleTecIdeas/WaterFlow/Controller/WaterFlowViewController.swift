@@ -46,7 +46,7 @@ class WaterFlowViewController: UIViewController {
 }
 extension WaterFlowViewController : NqwlWaterFlowLayoutDataSource {
     func numberOfCols(_ waterfallLaout: NqwlWaterFlowLayout) -> Int {
-        return 4
+        return 8
     }
     func waterfall(_ waterfallLaout: NqwlWaterFlowLayout, item: Int) -> CGFloat {
         return CGFloat(arc4random_uniform(150)+100)
@@ -64,7 +64,7 @@ extension WaterFlowViewController {
 extension WaterFlowViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 1000
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

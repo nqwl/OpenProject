@@ -8,11 +8,30 @@
 
 import UIKit
 
-// 屏幕宽度
+//////////////////////////////获取指定NSBundle下面的图片文件\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/// 找到指定的bundle
+func kFindeNSBunld(bundleName : String) -> String {
+    return Bundle.main.path(forResource: bundleName as String, ofType:"bundle")!
+}
+/// 找到bundle 文件夹下面对应的子文件
+func kNSBunldInFile(bundleName : String,subPath : String) -> String {
+    return "\(bundleName)/\(subPath)"
+}
+/// 获取指定路径图片文件
+func kGetNSbunldImImage(bundleName : String,imageName : String) -> UIImage {
+    return  UIImage.init(contentsOfFile: kNSBunldInFile(bundleName: bundleName, subPath: imageName) as String)!
+}
+/// 获取某个bundle的某个子文件下的某个图片
+func kGETNSbunldINImage(bundleName : String,subPath:String,imageName : String) -> UIImage {
+    return  kGetNSbunldImImage(bundleName: kNSBunldInFile(bundleName: kFindeNSBunld(bundleName: bundleName), subPath: subPath), imageName: imageName)
+}
+
+
+/// 屏幕宽度
 let kScreenH = UIScreen.main.bounds.height
-// 屏幕高度
+/// 屏幕高度
 let kScreenW = UIScreen.main.bounds.width
-//适配iPhoneX
+/// 适配iPhoneX
 let is_iPhoneX = (kScreenW == 375.0 && kScreenH == 812.0 ? true : false)
 let kNavibarH: CGFloat = is_iPhoneX ? 88.0 : 64.0
 let kTabbarH: CGFloat = is_iPhoneX ? 49.0+34.0 : 49.0
@@ -20,7 +39,7 @@ let kStatusbarH: CGFloat = is_iPhoneX ? 44.0 : 20.0
 let iPhoneXBottomH: CGFloat = 34.0
 let iPhoneXTopH: CGFloat = 24.0
 
-//适配字体
+/// 适配字体
 let kChineseFontName = "Heiti SC"
 func kChineseSystem (x : CGFloat) -> UIFont {
     return UIFont.init(name: kChineseFontName, size: x)!

@@ -12,6 +12,13 @@
 		673A8153206A3AA90077FC8B /* NqwlTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A8152206A3AA90077FC8B /* NqwlTitleStyle.swift */; };
 		673A8156206B6A660077FC8B /* NqwlTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A8154206B6A660077FC8B /* NqwlTitleCell.swift */; };
 		673A8157206B6A660077FC8B /* NqwlTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 673A8155206B6A660077FC8B /* NqwlTitleCell.xib */; };
+		6749FF04207AF7C600891BCC /* NqwlPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6749FF03207AF7C600891BCC /* NqwlPageCollectionView.swift */; };
+		6749FF08207B333E00891BCC /* XEmotionIcons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6749FF07207B333D00891BCC /* XEmotionIcons.bundle */; };
+		6749FF11207B466D00891BCC /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6749FF0F207B466D00891BCC /* EmojiCell.swift */; };
+		6749FF12207B466D00891BCC /* EmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6749FF10207B466D00891BCC /* EmojiCell.xib */; };
+		6765E7FF2079E3DE00B21FA8 /* NqwlPageCollectionViewLaout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6765E7FE2079E3DE00B21FA8 /* NqwlPageCollectionViewLaout.swift */; };
+		6765E808207A023400B21FA8 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6765E806207A023400B21FA8 /* EmojiViewController.swift */; };
+		6765E809207A023400B21FA8 /* EmojiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6765E807207A023400B21FA8 /* EmojiViewController.xib */; };
 		6783090C204E1AE3005A0DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6783090B204E1AE3005A0DFE /* AppDelegate.swift */; };
 		6783090E204E1AE3005A0DFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6783090D204E1AE3005A0DFE /* ViewController.swift */; };
 		67830911204E1AE3005A0DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6783090F204E1AE3005A0DFE /* Main.storyboard */; };
@@ -90,6 +97,13 @@
 		673A8152206A3AA90077FC8B /* NqwlTitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlTitleStyle.swift; sourceTree = "<group>"; };
 		673A8154206B6A660077FC8B /* NqwlTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlTitleCell.swift; sourceTree = "<group>"; };
 		673A8155206B6A660077FC8B /* NqwlTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NqwlTitleCell.xib; sourceTree = "<group>"; };
+		6749FF03207AF7C600891BCC /* NqwlPageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlPageCollectionView.swift; sourceTree = "<group>"; };
+		6749FF07207B333D00891BCC /* XEmotionIcons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XEmotionIcons.bundle; sourceTree = "<group>"; };
+		6749FF0F207B466D00891BCC /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
+		6749FF10207B466D00891BCC /* EmojiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmojiCell.xib; sourceTree = "<group>"; };
+		6765E7FE2079E3DE00B21FA8 /* NqwlPageCollectionViewLaout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlPageCollectionViewLaout.swift; sourceTree = "<group>"; };
+		6765E806207A023400B21FA8 /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
+		6765E807207A023400B21FA8 /* EmojiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmojiViewController.xib; sourceTree = "<group>"; };
 		67830908204E1AE3005A0DFE /* OpenProject-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenProject-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6783090B204E1AE3005A0DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6783090D204E1AE3005A0DFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +198,57 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		6765E8002079E51200B21FA8 /* WaterFlow */ = {
+			isa = PBXGroup;
+			children = (
+				67EF0C50205F479C0079EB92 /* NqwlWaterFlowLayout.swift */,
+			);
+			path = WaterFlow;
+			sourceTree = "<group>";
+		};
+		6765E801207A021000B21FA8 /* EmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6765E802207A021000B21FA8 /* ViewModel */,
+				6765E803207A021000B21FA8 /* Controller */,
+				6765E804207A021000B21FA8 /* Model */,
+				6765E805207A021000B21FA8 /* View */,
+			);
+			path = EmojiKeyboard;
+			sourceTree = "<group>";
+		};
+		6765E802207A021000B21FA8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6765E803207A021000B21FA8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6765E806207A023400B21FA8 /* EmojiViewController.swift */,
+				6765E807207A023400B21FA8 /* EmojiViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6765E804207A021000B21FA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6765E805207A021000B21FA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6749FF0F207B466D00891BCC /* EmojiCell.swift */,
+				6749FF10207B466D00891BCC /* EmojiCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		678308FF204E1AE2005A0DFE = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +285,7 @@
 				6783090D204E1AE3005A0DFE /* ViewController.swift */,
 				6783090F204E1AE3005A0DFE /* Main.storyboard */,
 				67830912204E1AE3005A0DFE /* Assets.xcassets */,
+				6749FF07207B333D00891BCC /* XEmotionIcons.bundle */,
 				67830914204E1AE3005A0DFE /* LaunchScreen.storyboard */,
 				67830917204E1AE3005A0DFE /* Info.plist */,
 			);
@@ -296,7 +362,6 @@
 				67E6C9D32068B1CA00103D40 /* Model */,
 				67E6C9D12068B1C900103D40 /* View */,
 				67E6C9D22068B1CA00103D40 /* ViewModel */,
-				67EF0C50205F479C0079EB92 /* NqwlWaterFlowLayout.swift */,
 				6783095D204E6D6B005A0DFE /* ExampleProvider.swift */,
 				6783095F204E6EAF005A0DFE /* CHBaseNavigationController.swift */,
 			);
@@ -343,6 +408,7 @@
 		67E6C9C82068B17600103D40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6765E8002079E51200B21FA8 /* WaterFlow */,
 				67E6CA062069CB0000103D40 /* PageView */,
 			);
 			path = View;
@@ -509,6 +575,7 @@
 		67E6C9E22068B34500103D40 /* SimpleTecIdeas */ = {
 			isa = PBXGroup;
 			children = (
+				6765E801207A021000B21FA8 /* EmojiKeyboard */,
 				67E6CA0D2069CBC100103D40 /* PageView */,
 				67E6C9F82068B43400103D40 /* Emitter */,
 				67E6C9EF2068B3B600103D40 /* WaterFlow */,
@@ -616,6 +683,8 @@
 				673A8152206A3AA90077FC8B /* NqwlTitleStyle.swift */,
 				673A8154206B6A660077FC8B /* NqwlTitleCell.swift */,
 				673A8155206B6A660077FC8B /* NqwlTitleCell.xib */,
+				6765E7FE2079E3DE00B21FA8 /* NqwlPageCollectionViewLaout.swift */,
+				6749FF03207AF7C600891BCC /* NqwlPageCollectionView.swift */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -831,11 +900,14 @@
 				67ED5E592058B1A0001EC133 /* MainCell.xib in Resources */,
 				67E6CA152069CBF300103D40 /* PageViewViewController.xib in Resources */,
 				67E6CA002068B44F00103D40 /* EmitterViewController.xib in Resources */,
+				6749FF12207B466D00891BCC /* EmojiCell.xib in Resources */,
 				6783095B204E6D31005A0DFE /* PhotoViewController.xib in Resources */,
 				67830954204E6D1E005A0DFE /* MainViewController.xib in Resources */,
+				6749FF08207B333E00891BCC /* XEmotionIcons.bundle in Resources */,
 				67ED5E5E20591AC3001EC133 /* MsgViewController.xib in Resources */,
 				67830913204E1AE3005A0DFE /* Assets.xcassets in Resources */,
 				67830911204E1AE3005A0DFE /* Main.storyboard in Resources */,
+				6765E809207A023400B21FA8 /* EmojiViewController.xib in Resources */,
 				673A8157206B6A660077FC8B /* NqwlTitleCell.xib in Resources */,
 				67830956204E6D1E005A0DFE /* MineViewController.xib in Resources */,
 			);
@@ -1051,12 +1123,16 @@
 				6783096A204E7708005A0DFE /* ExampleBackgroundContentView.swift in Sources */,
 				6783095E204E6D6B005A0DFE /* ExampleProvider.swift in Sources */,
 				67EF0C58205F4F280079EB92 /* MsgPicViewModel.swift in Sources */,
+				6765E808207A023400B21FA8 /* EmojiViewController.swift in Sources */,
 				6783096E204E7708005A0DFE /* ExampleHighlightableContentView.swift in Sources */,
 				67830970204E7708005A0DFE /* ExampleIrregularityContentView.swift in Sources */,
+				6749FF11207B466D00891BCC /* EmojiCell.swift in Sources */,
 				67E6CA142069CBF300103D40 /* PageViewViewController.swift in Sources */,
 				6783096C204E7708005A0DFE /* ExampleAnimateTipsContentView.swift in Sources */,
+				6765E7FF2079E3DE00B21FA8 /* NqwlPageCollectionViewLaout.swift in Sources */,
 				67E6CA0C2069CB6000103D40 /* NqwlContentView.swift in Sources */,
 				67EF0C53205F4A4B0079EB92 /* PicModel.swift in Sources */,
+				6749FF04207AF7C600891BCC /* NqwlPageCollectionView.swift in Sources */,
 				67073A30206487F800937299 /* KingfisherExtension.swift in Sources */,
 				673A8156206B6A660077FC8B /* NqwlTitleCell.swift in Sources */,
 				67E6C9FF2068B44F00103D40 /* EmitterViewController.swift in Sources */,

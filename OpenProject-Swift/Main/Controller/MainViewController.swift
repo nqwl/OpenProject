@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var contentTableView: UITableView!
-    fileprivate lazy var dataArray : [String] = ["简单的瀑布流","雪花粒子动画效果","选项卡效果设计"]
+    fileprivate lazy var dataArray : [String] = ["简单的瀑布流","雪花粒子动画效果","选项卡效果设计","微信表情键盘效果"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,9 +62,12 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
             let pageViewVC = PageViewViewController()
             navigationController?.pushViewController(pageViewVC, animated: true)
             break
+        case 3:
+            let emojiViewVC = EmojiViewController()
+            navigationController?.pushViewController(emojiViewVC, animated: true)
+            break
         default:
             break
         }
-
     }
 }

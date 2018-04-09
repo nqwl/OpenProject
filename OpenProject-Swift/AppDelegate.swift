@@ -8,6 +8,7 @@
 
 import UIKit
 import GDPerformanceView_Swift
+import Bugly
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = .white
         self.window?.rootViewController = ExampleProvider.tabbarWithNavigationStyle()
         self.window?.makeKeyAndVisible()
-        
+        Bugly.start(withAppId: "ebe916d860")
+
         return true
     }
 
