@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var contentTableView: UITableView!
-    fileprivate lazy var dataArray : [String] = ["简单的瀑布流","雪花粒子动画效果","选项卡效果设计","微信表情键盘效果"]
+    fileprivate lazy var dataArray : [String] = ["简单的瀑布流","雪花粒子动画效果","仿腾讯视频选项卡效果","微信表情键盘效果(优化版)"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

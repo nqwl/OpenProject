@@ -22,7 +22,7 @@ class NqwlPageCollectionViewLaout: UICollectionViewFlowLayout {
 extension NqwlPageCollectionViewLaout {
     override func prepare() {
         super.prepare()
-        //这里预判断cellAttrs是否已经被计算好了，如果计算好了，就没有必要重复执行下面的计算过程，下面的计算过程比较耗费性能
+        //这里预判断cellAttrs是否已经被计算好了，如果计算好了，就没有必要重复执行下面的计算过程，下面的计算过程比较耗费性能，而且出现严重的掉帧现象
         if cellAttrs.count == 0 {
             // 0.计算item宽度&高度
             let  itemW = (collectionView!.bounds.width - sectionInset.left - sectionInset.right - minimumInteritemSpacing * CGFloat(cols - 1)) / CGFloat(cols)
