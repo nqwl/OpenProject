@@ -44,16 +44,18 @@ class NqwlPageCollectionView: UIView {
 }
 
 
+
 // MARK:- 设置UI界面
 extension NqwlPageCollectionView {
     fileprivate func setupUI() {
+
         // 1.创建titleView
         let titleY = isTitleInTop ? 0 : bounds.height - style.titleHeight
         let titleFrame = CGRect(x: 0, y: titleY, width: bounds.width, height: style.titleHeight)
         titleView = NqwlTitleView(frame: titleFrame, titles: titles, style: style)
         addSubview(titleView)
         titleView.delegate = self
-        titleView.backgroundColor = UIColor.randomColor()
+        titleView.backgroundColor = UIColor.white
 
         // 2.创建UIPageControl
         let pageControlHeight : CGFloat = 20
@@ -62,8 +64,9 @@ extension NqwlPageCollectionView {
         pageControl = UIPageControl(frame: pageControlFrame)
         pageControl.numberOfPages = 4
         pageControl.isEnabled = false
+        pageControl.pageIndicatorTintColor = UIColor.white
+        pageControl.currentPageIndicatorTintColor = UIColor.init(r: 122, g: 122, b: 122)
         addSubview(pageControl)
-        pageControl.backgroundColor = UIColor.randomColor()
 
         // 3.创建UICollectionView
         let collectionViewY = isTitleInTop ? style.titleHeight : 0
@@ -73,12 +76,8 @@ extension NqwlPageCollectionView {
         collectionView.delegate = self
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
-        if #available(iOS 10.0, *) {
-            collectionView.isPrefetchingEnabled = false
-        } else {
-            // Fallback on earlier versions
-        }
-        collectionView.backgroundColor = UIColor.init(r: 255, g: 255, b: 255)
+        collectionView.backgroundColor = UIColor.groupTableViewBackground
+        pageControl.backgroundColor = collectionView.backgroundColor
         addSubview(collectionView)
     }
 }

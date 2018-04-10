@@ -7,6 +7,7 @@
 //
 
 import UIKit
+/*
 import ObjectMapper
 
 
@@ -50,3 +51,4 @@ struct PicModel: Mappable {
     var set_id = 92980
     var content_sigh = ""
 }
+*/

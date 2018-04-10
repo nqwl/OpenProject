@@ -20,7 +20,7 @@ class NqwlTitleStyle {
     /// 滚动Title的字体间距
     var titleMargin : CGFloat = 20
     /// title的高度
-    var titleHeight : CGFloat = 44
+    var titleHeight : CGFloat = 40
 
     /// 是否显示底部滚动条
     var isShowBottomLine : Bool = false

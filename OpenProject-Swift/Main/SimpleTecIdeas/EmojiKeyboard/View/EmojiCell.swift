@@ -11,6 +11,13 @@ import UIKit
 class EmojiCell: UICollectionViewCell {
 
     @IBOutlet weak var iconImageView: UIImageView!
+
+    func configCellWithQQ(model:QQEmotionModel) {
+        self.iconImageView.image = kGETNSbunldINImage(bundleName: "XEmotionIcons", subPath: "/QQEmotion/", imageName: model.png!)
+    }
+    func configCellWithLXH(model:LXHEmotionModel) {
+        self.iconImageView.image = kGETNSbunldINImage(bundleName: "XEmotionIcons", subPath: "/lxh/", imageName:model.png!)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

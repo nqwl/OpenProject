@@ -7,6 +7,7 @@
 //
 
 import Foundation
+/*
 import ObjectMapper
 
 struct MsgPicModel: Mappable {
@@ -38,3 +39,4 @@ struct MsgPicModel: Mappable {
     var errno = 0
     var msg = "success"
 }
+*/

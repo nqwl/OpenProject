@@ -12,15 +12,13 @@ target 'OpenProject-Swift' do
     pod 'RxSwift', '~> 4.1.2'
     pod 'RxCocoa', '~> 4.1.2'
     # 各类样式的tabBarController
-    pod 'ESTabBarController-swift', '~> 2.6.1'
+    pod 'ESTabBarController-swift', '~> 2.6.2'
     # table view 空数据占位
     pod 'EmptyDataSet-Swift', '~> 4.0.3'
     # 网络请求
     pod 'Moya', '~> 11.0.1'
     # JSON
-    pod 'SwiftyJSON'
-
-    pod 'ObjectMapper', '~> 3.1.0'
+    pod 'HandyJSON', '~> 4.1.1'
     pod 'Kingfisher', '~> 4.6.2'
     pod 'Bugly', '~> 2.5.0'
 
