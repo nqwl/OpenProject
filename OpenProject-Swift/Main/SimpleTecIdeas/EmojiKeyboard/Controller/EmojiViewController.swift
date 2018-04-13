@@ -34,6 +34,7 @@ class EmojiViewController: UIViewController {
         let pageCollectionView = NqwlPageCollectionView(frame: pageFrame, titles: titles, style: style, isTitleInTop: false, layout: layout)
 
         pageCollectionView.dataSource = self
+        pageCollectionView.delegate = self
         pageCollectionView.register(nib: UINib.init(nibName: "EmojiCell", bundle: nil), identifier: "EmojiCell")
 
         view.addSubview(pageCollectionView)
@@ -43,8 +44,10 @@ class EmojiViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-extension EmojiViewController {
-
+extension EmojiViewController :NqwlPageCollectionViewDelegate {
+    func pageCollectionView(_ collectionView: NqwlPageCollectionView, didSelectedItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
 }
 extension EmojiViewController : NqwlPageCollectionViewDataSource {
     func numberOfSections(in pageCollectionView: NqwlPageCollectionView) -> Int {

@@ -9,10 +9,11 @@
 import UIKit
 
 class WaterFlowViewController: UIViewController {
+    fileprivate lazy var cellCount : Int = 30
 
     fileprivate lazy var contentCollectionView : UICollectionView =  {
         let  layout = NqwlWaterFlowLayout()
-        layout.sectionInset = UIEdgeInsetsMake(0, 10, 10, 10)
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         layout.dataSource = self
@@ -46,7 +47,7 @@ class WaterFlowViewController: UIViewController {
 }
 extension WaterFlowViewController : NqwlWaterFlowLayoutDataSource {
     func numberOfCols(_ waterfallLaout: NqwlWaterFlowLayout) -> Int {
-        return 8
+        return 3
     }
     func waterfall(_ waterfallLaout: NqwlWaterFlowLayout, item: Int) -> CGFloat {
         return CGFloat(arc4random_uniform(150)+100)
@@ -64,12 +65,13 @@ extension WaterFlowViewController {
 extension WaterFlowViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1000
+        return cellCount
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell", for: indexPath)
         cell.backgroundColor = .red
+
         return cell
     }
 

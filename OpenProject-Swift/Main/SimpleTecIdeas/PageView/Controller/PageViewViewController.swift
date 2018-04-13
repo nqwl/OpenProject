@@ -28,6 +28,7 @@ class PageViewViewController: UIViewController {
         style.isShowCover = true
         style.isShowBottomLine = true
         style.isNeedScale = true
+        style.font = UIFont.systemFont(ofSize: 15.0)
         let layout = NqwlPageCollectionViewLaout()
         layout.sectionInset = UIEdgeInsetsMake(10, 20, 30, 40)
         layout.minimumLineSpacing = 10

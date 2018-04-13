@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		67073A2E206487E300937299 /* NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67073A2D206487E300937299 /* NetworkExtension.swift */; };
 		67073A30206487F800937299 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67073A2F206487F800937299 /* KingfisherExtension.swift */; };
+		672D61602080338200D55C44 /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D615E2080338200D55C44 /* GifViewController.swift */; };
+		672D61612080338200D55C44 /* GifViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672D615F2080338200D55C44 /* GifViewController.xib */; };
+		672D6164208033BF00D55C44 /* ImageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D6162208033BF00D55C44 /* ImageFrame.swift */; };
+		672D6165208033BF00D55C44 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D6163208033BF00D55C44 /* Animator.swift */; };
+		672D61692080350A00D55C44 /* UIImageView-NqwlGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D61682080350A00D55C44 /* UIImageView-NqwlGif.swift */; };
+		672D617220804AC300D55C44 /* CaptrueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D617020804AC300D55C44 /* CaptrueViewController.swift */; };
+		672D617320804AC300D55C44 /* CaptrueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672D617120804AC300D55C44 /* CaptrueViewController.xib */; };
 		673A8153206A3AA90077FC8B /* NqwlTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A8152206A3AA90077FC8B /* NqwlTitleStyle.swift */; };
 		673A8156206B6A660077FC8B /* NqwlTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A8154206B6A660077FC8B /* NqwlTitleCell.swift */; };
 		673A8157206B6A660077FC8B /* NqwlTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 673A8155206B6A660077FC8B /* NqwlTitleCell.xib */; };
@@ -97,6 +104,13 @@
 		50AFA823CB0E0BA66EDE9930 /* Pods_OpenProject_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenProject_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67073A2D206487E300937299 /* NetworkExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExtension.swift; sourceTree = "<group>"; };
 		67073A2F206487F800937299 /* KingfisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		672D615E2080338200D55C44 /* GifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
+		672D615F2080338200D55C44 /* GifViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifViewController.xib; sourceTree = "<group>"; };
+		672D6162208033BF00D55C44 /* ImageFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFrame.swift; sourceTree = "<group>"; };
+		672D6163208033BF00D55C44 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		672D61682080350A00D55C44 /* UIImageView-NqwlGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView-NqwlGif.swift"; sourceTree = "<group>"; };
+		672D617020804AC300D55C44 /* CaptrueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptrueViewController.swift; sourceTree = "<group>"; };
+		672D617120804AC300D55C44 /* CaptrueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaptrueViewController.xib; sourceTree = "<group>"; };
 		673A8152206A3AA90077FC8B /* NqwlTitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlTitleStyle.swift; sourceTree = "<group>"; };
 		673A8154206B6A660077FC8B /* NqwlTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlTitleCell.swift; sourceTree = "<group>"; };
 		673A8155206B6A660077FC8B /* NqwlTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NqwlTitleCell.xib; sourceTree = "<group>"; };
@@ -200,6 +214,144 @@
 			children = (
 				67073A2D206487E300937299 /* NetworkExtension.swift */,
 				67073A2F206487F800937299 /* KingfisherExtension.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		672D61592080336F00D55C44 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				672D615A2080336F00D55C44 /* ViewModel */,
+				672D615B2080336F00D55C44 /* Controller */,
+				672D615C2080336F00D55C44 /* Model */,
+				672D615D2080336F00D55C44 /* View */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		672D615A2080336F00D55C44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		672D615B2080336F00D55C44 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				672D615E2080338200D55C44 /* GifViewController.swift */,
+				672D615F2080338200D55C44 /* GifViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		672D615C2080336F00D55C44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		672D615D2080336F00D55C44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		672D616A208041A400D55C44 /* Gif-Extension */ = {
+			isa = PBXGroup;
+			children = (
+				672D6163208033BF00D55C44 /* Animator.swift */,
+				672D6162208033BF00D55C44 /* ImageFrame.swift */,
+				672D61682080350A00D55C44 /* UIImageView-NqwlGif.swift */,
+			);
+			path = "Gif-Extension";
+			sourceTree = "<group>";
+		};
+		672D616B20804AAF00D55C44 /* Captrue */ = {
+			isa = PBXGroup;
+			children = (
+				672D616C20804AAF00D55C44 /* ViewModel */,
+				672D616D20804AAF00D55C44 /* Controller */,
+				672D616E20804AAF00D55C44 /* Model */,
+				672D616F20804AAF00D55C44 /* View */,
+			);
+			path = Captrue;
+			sourceTree = "<group>";
+		};
+		672D616C20804AAF00D55C44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		672D616D20804AAF00D55C44 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				672D617020804AC300D55C44 /* CaptrueViewController.swift */,
+				672D617120804AC300D55C44 /* CaptrueViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		672D616E20804AAF00D55C44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		672D616F20804AAF00D55C44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		672E1A61207EEF0A00A21750 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				672E1A62207EEF0A00A21750 /* ViewModel */,
+				672E1A63207EEF0A00A21750 /* Controller */,
+				672E1A64207EEF0A00A21750 /* Model */,
+				672E1A65207EEF0A00A21750 /* View */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		672E1A62207EEF0A00A21750 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		672E1A63207EEF0A00A21750 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		672E1A64207EEF0A00A21750 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		672E1A65207EEF0A00A21750 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		672E1A6A207EEF5200A21750 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -333,11 +485,12 @@
 		6783094B204E6D1D005A0DFE /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				67860FD62052719F00E7A050 /* MainViewModel.swift */,
+				67ED5E562058B1A0001EC133 /* MainCell.swift */,
+				67ED5E572058B1A0001EC133 /* MainCell.xib */,
+				6783094D204E6D1D005A0DFE /* MainViewController.swift */,
+				6783094C204E6D1D005A0DFE /* MainViewController.xib */,
 				67E6C9E22068B34500103D40 /* SimpleTecIdeas */,
-				67E6C9D42068B1D400103D40 /* Controller */,
-				67E6C9D72068B1D400103D40 /* Model */,
-				67E6C9D52068B1D400103D40 /* View */,
-				67E6C9D62068B1D400103D40 /* ViewModel */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -404,6 +557,7 @@
 		67A1F80A205BB0CB00EB36AF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				672E1A6A207EEF5200A21750 /* Tools */,
 				67E6CA012068B54F00103D40 /* Protocol */,
 				67E6C9CA2068B17700103D40 /* Controller */,
 				67E6C9CB2068B17700103D40 /* Model */,
@@ -466,39 +620,6 @@
 			sourceTree = "<group>";
 		};
 		67E6C9D32068B1CA00103D40 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		67E6C9D42068B1D400103D40 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6783094D204E6D1D005A0DFE /* MainViewController.swift */,
-				6783094C204E6D1D005A0DFE /* MainViewController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		67E6C9D52068B1D400103D40 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				67ED5E562058B1A0001EC133 /* MainCell.swift */,
-				67ED5E572058B1A0001EC133 /* MainCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		67E6C9D62068B1D400103D40 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				67860FD62052719F00E7A050 /* MainViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		67E6C9D72068B1D400103D40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -584,6 +705,9 @@
 		67E6C9E22068B34500103D40 /* SimpleTecIdeas */ = {
 			isa = PBXGroup;
 			children = (
+				672D616B20804AAF00D55C44 /* Captrue */,
+				672D61592080336F00D55C44 /* Gif */,
+				672E1A61207EEF0A00A21750 /* IM */,
 				6765E801207A021000B21FA8 /* EmojiKeyboard */,
 				67E6CA0D2069CBC100103D40 /* PageView */,
 				67E6C9F82068B43400103D40 /* Emitter */,
@@ -742,6 +866,7 @@
 		67ED5E5A2058C2BF001EC133 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				672D616A208041A400D55C44 /* Gif-Extension */,
 				67ED5E5B2058C2D7001EC133 /* UIColor-Extension.swift */,
 				67A1F808205BAE1100EB36AF /* UIImage-Color.swift */,
 			);
@@ -915,7 +1040,9 @@
 				6749FF08207B333E00891BCC /* XEmotionIcons.bundle in Resources */,
 				67ED5E5E20591AC3001EC133 /* MsgViewController.xib in Resources */,
 				67830913204E1AE3005A0DFE /* Assets.xcassets in Resources */,
+				672D61612080338200D55C44 /* GifViewController.xib in Resources */,
 				67830911204E1AE3005A0DFE /* Main.storyboard in Resources */,
+				672D617320804AC300D55C44 /* CaptrueViewController.xib in Resources */,
 				6765E809207A023400B21FA8 /* EmojiViewController.xib in Resources */,
 				673A8157206B6A660077FC8B /* NqwlTitleCell.xib in Resources */,
 				67830956204E6D1E005A0DFE /* MineViewController.xib in Resources */,
@@ -1120,11 +1247,14 @@
 				67E6CA052068C4A800103D40 /* NibLoadable.swift in Sources */,
 				67ED5E582058B1A0001EC133 /* MainCell.swift in Sources */,
 				67A1F80C205BB0FE00EB36AF /* Common.swift in Sources */,
+				672D617220804AC300D55C44 /* CaptrueViewController.swift in Sources */,
 				67E6CA032068B5EB00103D40 /* Emitterable.swift in Sources */,
 				67830960204E6EAF005A0DFE /* CHBaseNavigationController.swift in Sources */,
 				67E6CA082069CB3000103D40 /* NqwlPageView.swift in Sources */,
 				6749FF14207C494A00891BCC /* QQEmotionModel.swift in Sources */,
 				6783090C204E1AE3005A0DFE /* AppDelegate.swift in Sources */,
+				672D61692080350A00D55C44 /* UIImageView-NqwlGif.swift in Sources */,
+				672D6164208033BF00D55C44 /* ImageFrame.swift in Sources */,
 				67EF0C51205F479D0079EB92 /* NqwlWaterFlowLayout.swift in Sources */,
 				67830955204E6D1E005A0DFE /* MainViewController.swift in Sources */,
 				6783096F204E7708005A0DFE /* ExampleTipsContentView.swift in Sources */,
@@ -1150,9 +1280,11 @@
 				6783096D204E7708005A0DFE /* ExampleBasicContentView.swift in Sources */,
 				67A1F809205BAE1100EB36AF /* UIImage-Color.swift in Sources */,
 				67ED5E5C2058C2D7001EC133 /* UIColor-Extension.swift in Sources */,
+				672D61602080338200D55C44 /* GifViewController.swift in Sources */,
 				67830957204E6D1E005A0DFE /* MineViewController.swift in Sources */,
 				6783095A204E6D31005A0DFE /* PhotoViewController.swift in Sources */,
 				6783096B204E7708005A0DFE /* ExampleBouncesContentView.swift in Sources */,
+				672D6165208033BF00D55C44 /* Animator.swift in Sources */,
 				67860FD72052719F00E7A050 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

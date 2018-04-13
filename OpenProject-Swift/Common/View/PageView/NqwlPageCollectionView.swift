@@ -13,10 +13,13 @@ protocol NqwlPageCollectionViewDataSource : class {
     func pageCollectionView(_ collectionView: NqwlPageCollectionView, numberOfItemsInSection section: Int) -> Int
     func pageCollectionView(_ pageCollectionView : NqwlPageCollectionView ,_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
-
+protocol NqwlPageCollectionViewDelegate : class {
+    func pageCollectionView(_ collectionView:NqwlPageCollectionView,didSelectedItemAt indexPath:IndexPath)
+}
 class NqwlPageCollectionView: UIView {
 
     weak var dataSource : NqwlPageCollectionViewDataSource?
+    weak var delegate : NqwlPageCollectionViewDelegate?
 
     fileprivate var titles : [String]
     fileprivate var isTitleInTop : Bool
@@ -120,6 +123,9 @@ extension NqwlPageCollectionView : UICollectionViewDataSource {
 
 // MARK:- UICollectionViewDelegate
 extension NqwlPageCollectionView : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate!.pageCollectionView(self, didSelectedItemAt: indexPath)
+    }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         scrollViewEndScroll()
     }

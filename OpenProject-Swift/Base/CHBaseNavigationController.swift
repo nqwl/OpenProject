@@ -22,7 +22,6 @@ class CHBaseNavigationController: UINavigationController {
 //        }
         guard  let  targets = interactivePopGestureRecognizer?.value(forKey: "_targets") as? [NSObject] else { return }
         let targetObj = targets[0]
-        print(targetObj)
         let target = targetObj.value(forKey: "target")
         let action = Selector(("handleNavigationTransition:"))
         let panGes = UIPanGestureRecognizer.init(target: target , action:action)
