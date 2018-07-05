@@ -21,6 +21,7 @@ target 'OpenProject-Swift' do
     pod 'HandyJSON', '~> 4.1.1'
     pod 'Kingfisher', '~> 4.6.2'
     pod 'Bugly', '~> 2.5.0'
+    pod 'GPUImage', '~> 0.1.7'
 
 end
 target 'OpenProject-SwiftTests' do

@@ -19,6 +19,10 @@
 		673A8153206A3AA90077FC8B /* NqwlTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A8152206A3AA90077FC8B /* NqwlTitleStyle.swift */; };
 		673A8156206B6A660077FC8B /* NqwlTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673A8154206B6A660077FC8B /* NqwlTitleCell.swift */; };
 		673A8157206B6A660077FC8B /* NqwlTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 673A8155206B6A660077FC8B /* NqwlTitleCell.xib */; };
+		673D3939208094A0008BEC42 /* GPUImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673D3937208094A0008BEC42 /* GPUImageViewController.swift */; };
+		673D393A208094A0008BEC42 /* GPUImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 673D3938208094A0008BEC42 /* GPUImageViewController.xib */; };
+		673D393D20847C8F008BEC42 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673D393B20847C8F008BEC42 /* ImageViewController.swift */; };
+		673D393E20847C8F008BEC42 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 673D393C20847C8F008BEC42 /* ImageViewController.xib */; };
 		6749FF04207AF7C600891BCC /* NqwlPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6749FF03207AF7C600891BCC /* NqwlPageCollectionView.swift */; };
 		6749FF08207B333E00891BCC /* XEmotionIcons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6749FF07207B333D00891BCC /* XEmotionIcons.bundle */; };
 		6749FF11207B466D00891BCC /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6749FF0F207B466D00891BCC /* EmojiCell.swift */; };
@@ -74,6 +78,7 @@
 		67EF0C53205F4A4B0079EB92 /* PicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF0C52205F4A4B0079EB92 /* PicModel.swift */; };
 		67EF0C55205F4BF80079EB92 /* MsgPicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF0C54205F4BF80079EB92 /* MsgPicModel.swift */; };
 		67EF0C58205F4F280079EB92 /* MsgPicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF0C57205F4F280079EB92 /* MsgPicViewModel.swift */; };
+		67F4EBE5208089FE00559EE7 /* AVCaptrueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F4EBE4208089FD00559EE7 /* AVCaptrueManager.swift */; };
 		6D5AB145A00A7CD5DA8A9025 /* Pods_OpenProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AFA823CB0E0BA66EDE9930 /* Pods_OpenProject_Swift.framework */; };
 		724B163A7B74F804A87AB924 /* Pods_OpenProject_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464FAB2B98406B64C6D52CA4 /* Pods_OpenProject_SwiftUITests.framework */; };
 		922DF3E44AE4908E6E9413C2 /* Pods_OpenProject_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FD97F14F71D6A5EAC4DEDF /* Pods_OpenProject_SwiftTests.framework */; };
@@ -114,6 +119,10 @@
 		673A8152206A3AA90077FC8B /* NqwlTitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlTitleStyle.swift; sourceTree = "<group>"; };
 		673A8154206B6A660077FC8B /* NqwlTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlTitleCell.swift; sourceTree = "<group>"; };
 		673A8155206B6A660077FC8B /* NqwlTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NqwlTitleCell.xib; sourceTree = "<group>"; };
+		673D3937208094A0008BEC42 /* GPUImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUImageViewController.swift; sourceTree = "<group>"; };
+		673D3938208094A0008BEC42 /* GPUImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPUImageViewController.xib; sourceTree = "<group>"; };
+		673D393B20847C8F008BEC42 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		673D393C20847C8F008BEC42 /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		6749FF03207AF7C600891BCC /* NqwlPageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NqwlPageCollectionView.swift; sourceTree = "<group>"; };
 		6749FF07207B333D00891BCC /* XEmotionIcons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XEmotionIcons.bundle; sourceTree = "<group>"; };
 		6749FF0F207B466D00891BCC /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
@@ -175,6 +184,7 @@
 		67EF0C52205F4A4B0079EB92 /* PicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicModel.swift; sourceTree = "<group>"; };
 		67EF0C54205F4BF80079EB92 /* MsgPicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgPicModel.swift; sourceTree = "<group>"; };
 		67EF0C57205F4F280079EB92 /* MsgPicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgPicViewModel.swift; sourceTree = "<group>"; };
+		67F4EBE4208089FD00559EE7 /* AVCaptrueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptrueManager.swift; sourceTree = "<group>"; };
 		6CAA77CE8563D0D856B62175 /* Pods-OpenProject-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenProject-SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenProject-SwiftTests/Pods-OpenProject-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70CCAF711A35B6B41AFE140A /* Pods-OpenProject-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenProject-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenProject-Swift/Pods-OpenProject-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		A6FD97F14F71D6A5EAC4DEDF /* Pods_OpenProject_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenProject_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +309,7 @@
 		672D616E20804AAF00D55C44 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				67F4EBE4208089FD00559EE7 /* AVCaptrueManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,6 +365,49 @@
 			children = (
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		673D393220809480008BEC42 /* GPUImage */ = {
+			isa = PBXGroup;
+			children = (
+				673D393320809480008BEC42 /* ViewModel */,
+				673D393420809480008BEC42 /* Controller */,
+				673D393520809480008BEC42 /* Model */,
+				673D393620809480008BEC42 /* View */,
+			);
+			path = GPUImage;
+			sourceTree = "<group>";
+		};
+		673D393320809480008BEC42 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		673D393420809480008BEC42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				673D3937208094A0008BEC42 /* GPUImageViewController.swift */,
+				673D3938208094A0008BEC42 /* GPUImageViewController.xib */,
+				673D393B20847C8F008BEC42 /* ImageViewController.swift */,
+				673D393C20847C8F008BEC42 /* ImageViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		673D393520809480008BEC42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		673D393620809480008BEC42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6765E8002079E51200B21FA8 /* WaterFlow */ = {
@@ -705,6 +759,7 @@
 		67E6C9E22068B34500103D40 /* SimpleTecIdeas */ = {
 			isa = PBXGroup;
 			children = (
+				673D393220809480008BEC42 /* GPUImage */,
 				672D616B20804AAF00D55C44 /* Captrue */,
 				672D61592080336F00D55C44 /* Gif */,
 				672E1A61207EEF0A00A21750 /* IM */,
@@ -1036,12 +1091,14 @@
 				67E6CA002068B44F00103D40 /* EmitterViewController.xib in Resources */,
 				6749FF12207B466D00891BCC /* EmojiCell.xib in Resources */,
 				6783095B204E6D31005A0DFE /* PhotoViewController.xib in Resources */,
+				673D393A208094A0008BEC42 /* GPUImageViewController.xib in Resources */,
 				67830954204E6D1E005A0DFE /* MainViewController.xib in Resources */,
 				6749FF08207B333E00891BCC /* XEmotionIcons.bundle in Resources */,
 				67ED5E5E20591AC3001EC133 /* MsgViewController.xib in Resources */,
 				67830913204E1AE3005A0DFE /* Assets.xcassets in Resources */,
 				672D61612080338200D55C44 /* GifViewController.xib in Resources */,
 				67830911204E1AE3005A0DFE /* Main.storyboard in Resources */,
+				673D393E20847C8F008BEC42 /* ImageViewController.xib in Resources */,
 				672D617320804AC300D55C44 /* CaptrueViewController.xib in Resources */,
 				6765E809207A023400B21FA8 /* EmojiViewController.xib in Resources */,
 				673A8157206B6A660077FC8B /* NqwlTitleCell.xib in Resources */,
@@ -1191,6 +1248,7 @@
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -1204,6 +1262,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -1241,6 +1300,7 @@
 				673A8153206A3AA90077FC8B /* NqwlTitleStyle.swift in Sources */,
 				67073A2E206487E300937299 /* NetworkExtension.swift in Sources */,
 				6749FF16207C496A00891BCC /* LXHEmotionModel.swift in Sources */,
+				67F4EBE5208089FE00559EE7 /* AVCaptrueManager.swift in Sources */,
 				67830953204E6D1E005A0DFE /* MsgViewController.swift in Sources */,
 				6749FF18207C85A700891BCC /* EmotionViewModel.swift in Sources */,
 				6783090E204E1AE3005A0DFE /* ViewController.swift in Sources */,
@@ -1262,6 +1322,7 @@
 				67E6C9F72068B3B600103D40 /* WaterFlowViewController.swift in Sources */,
 				6783096A204E7708005A0DFE /* ExampleBackgroundContentView.swift in Sources */,
 				6783095E204E6D6B005A0DFE /* ExampleProvider.swift in Sources */,
+				673D3939208094A0008BEC42 /* GPUImageViewController.swift in Sources */,
 				67EF0C58205F4F280079EB92 /* MsgPicViewModel.swift in Sources */,
 				6765E808207A023400B21FA8 /* EmojiViewController.swift in Sources */,
 				6783096E204E7708005A0DFE /* ExampleHighlightableContentView.swift in Sources */,
@@ -1273,6 +1334,7 @@
 				67E6CA0C2069CB6000103D40 /* NqwlContentView.swift in Sources */,
 				67EF0C53205F4A4B0079EB92 /* PicModel.swift in Sources */,
 				6749FF04207AF7C600891BCC /* NqwlPageCollectionView.swift in Sources */,
+				673D393D20847C8F008BEC42 /* ImageViewController.swift in Sources */,
 				67073A30206487F800937299 /* KingfisherExtension.swift in Sources */,
 				673A8156206B6A660077FC8B /* NqwlTitleCell.swift in Sources */,
 				67E6C9FF2068B44F00103D40 /* EmitterViewController.swift in Sources */,

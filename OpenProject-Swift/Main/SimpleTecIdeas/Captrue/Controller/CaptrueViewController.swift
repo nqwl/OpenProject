@@ -9,13 +9,24 @@
 import UIKit
 
 class CaptrueViewController: UIViewController {
+    fileprivate lazy var manager : AVCaptrueManager = AVCaptrueManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        manager.setupVideoInputOutput()
+        manager.setupAudioInputOutput()
     }
 
+    @IBAction func romateCaptruingBtnClick(_ sender: Any) {
+        self.manager.rotateCamera()
+    }
+    @IBAction func stopCaptruingBtnClick(_ sender: Any) {
+        self.manager.stopCapturing()
+        navigationController?.popViewController(animated: true)
+    }
+    @IBAction func startCaptruingBtnClick(_ sender: Any) {
+        self.manager.startCapturing(preview: self.view)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -23,13 +34,13 @@ class CaptrueViewController: UIViewController {
     
 
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 
 }
