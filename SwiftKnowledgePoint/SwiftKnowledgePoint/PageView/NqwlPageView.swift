@@ -29,7 +29,11 @@ class NqwlPageView: UIView {
         self.titles = titles
         self.childVcs = childVcs
         self.parentVc = parentVc
-        parentVc.automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0,*) {
+        }else {
+            parentVc.automaticallyAdjustsScrollViewInsets = false
+        }
+
 
         setupUI()
     }

@@ -10,8 +10,10 @@ import UIKit
 
 class NContentViewController: UIViewController {
     private let headerHeight : CGFloat = 200
+    private var headerOffsetY : CGFloat = 0
+
     private var childScrollView : UIScrollView = UIScrollView.init()
-    lazy var pageView : NqwlPageView = {
+    private lazy var pageView : NqwlPageView = {
         let titles = ["精选","爱看","王牌","斗罗大陆","动漫","电影","综艺","电视剧","小说"]
         var childVCs = [UIViewController]()
         for _ in 0 ..< titles.count {
@@ -38,7 +40,7 @@ class NContentViewController: UIViewController {
         tb.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tb.delegate = self as UITableViewDelegate
         tb.dataSource = self as UITableViewDataSource
-        
+        tb.bounces = true  //弹性
         tb.tableFooterView = UIView()
         let headerV = UIView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenW, height: headerHeight))
         headerV.backgroundColor = .randomColor()
@@ -50,6 +52,7 @@ class NContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "PageController"
+
         NotificationCenter.default.addObserver(self, selector: #selector(subScrollNotification(_:)), name: NSNotification.Name.SubScrollNotification, object: nil)
         self.contenTB.frame = CGRect.init(x: 0, y: kNavibarH, width: kScreenW, height: kScreenH-kNavibarH)
         self.view.addSubview(self.contenTB)
@@ -63,8 +66,9 @@ class NContentViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     @objc func subScrollNotification(_ notification:NSNotification) {
-        let scrollView = notification.object as! UIScrollView;
+        let scrollView = notification.userInfo?["scrollingScrollView"] as! UIScrollView;
         self.childScrollView = scrollView
+
         if self.contenTB.contentOffset.y < self.headerHeight {
             scrollView.contentOffset = CGPoint.zero;
             scrollView.showsVerticalScrollIndicator = false;
@@ -72,20 +76,30 @@ class NContentViewController: UIViewController {
             scrollView.showsVerticalScrollIndicator = true;
         }
     }
+    func changeColor(_ color: UIColor, _ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY >= 0 {
+            let alpha = offsetY/200 > 1.0 ? 1 : (offsetY/200)
+            print(alpha)
+        }
+    }
+
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
 }
+extension NContentViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.contenTB.isEqual(scrollView) {
+            self.changeColor(UIColor.red, scrollView)
+            if (scrollView.contentOffset.y > self.headerHeight)||(self.childScrollView.contentOffset.y > 0) {
+                self.contenTB.contentOffset = CGPoint.init(x: 0, y: self.headerHeight);
+            }
+            print(scrollView.contentOffset.y)
+        }
+    }
+}
+
 extension Notification.Name {
    static let SubScrollNotification = Notification.Name(rawValue:"SubScrollNotification")
 }
@@ -111,20 +125,6 @@ extension NContentViewController: UITableViewDelegate,UITableViewDataSource {
             navigationController?.pushViewController(homeVC, animated: true)
         default:
             break
-        }
-    }
-}
-extension NContentViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if self.contenTB.isEqual(scrollView) {
-            if (scrollView.contentOffset.y > self.headerHeight)||(self.pageView.contentView.collectionView.contentOffset.y>0)||(self.childScrollView.contentOffset.y > 0) {
-                self.contenTB.contentOffset = CGPoint.init(x: 0, y: self.headerHeight);
-            }
-            let offSetY = scrollView.contentOffset.y;
-            if offSetY <= self.headerHeight {
-                NotificationCenter.default.post(name: NSNotification.Name.BottomScrollNotification, object: nil)
-            }
-
         }
     }
 }

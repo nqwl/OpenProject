@@ -22,26 +22,27 @@ class NBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.title = "多控制器管理"
-        NotificationCenter.default.addObserver(self, selector: #selector(bottomScrollNotification), name: NSNotification.Name.BottomScrollNotification, object: nil)
+        if #available(iOS 11.0, *) {
+            self.contenTB.contentInsetAdjustmentBehavior = .never;
+        }
 
         self.contenTB.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH-kNavibarH-44)
         self.view.addSubview(contenTB)
     }
-    @objc func bottomScrollNotification(){
-//        self.contenTB.contentOffset = CGPoint.zero
-    }
+
     deinit {
-           NotificationCenter.default.removeObserver(self)
     }
 }
-extension Notification.Name {
-    /// Bottom Scroll
-   static let BottomScrollNotification = Notification.Name(rawValue:"BottomScrollNotification")
+extension NBaseViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        NotificationCenter.default.post(name: NSNotification.Name.SubScrollNotification, object: nil, userInfo: ["scrollingScrollView":scrollView])
+    }
 }
+
 
 extension NBaseViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return 60
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,9 +52,4 @@ extension NBaseViewController: UITableViewDelegate,UITableViewDataSource {
         return cell
     }
 
-}
-extension NBaseViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        NotificationCenter.default.post(name: NSNotification.Name.SubScrollNotification, object: scrollView)
-    }
 }

@@ -34,7 +34,7 @@ class NqwlContentView: UIView {
     fileprivate var startOffsetX : CGFloat = 0
 
     // MARK: 控件属性
-    lazy var collectionView : UICollectionView = {
+    fileprivate lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = self.bounds.size
         layout.minimumLineSpacing = 0
