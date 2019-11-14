@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F69B3F47237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F3F237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift */; };
+		F69B3F48237BE9F9008F7AA0 /* NqwlTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F40237BE9F9008F7AA0 /* NqwlTitleView.swift */; };
+		F69B3F49237BE9F9008F7AA0 /* NqwlPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F41237BE9F9008F7AA0 /* NqwlPageView.swift */; };
+		F69B3F4A237BE9F9008F7AA0 /* NqwlTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F42237BE9F9008F7AA0 /* NqwlTitleStyle.swift */; };
+		F69B3F4B237BE9F9008F7AA0 /* NqwlTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F43237BE9F9008F7AA0 /* NqwlTitleCell.swift */; };
+		F69B3F4C237BE9F9008F7AA0 /* NqwlPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F44237BE9F9008F7AA0 /* NqwlPageCollectionView.swift */; };
+		F69B3F4D237BE9F9008F7AA0 /* NqwlTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69B3F45237BE9F9008F7AA0 /* NqwlTitleCell.xib */; };
+		F69B3F4E237BE9F9008F7AA0 /* NqwlContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F46237BE9F9008F7AA0 /* NqwlContentView.swift */; };
+		F69B3F50237BF367008F7AA0 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F4F237BF367008F7AA0 /* Common.swift */; };
+		F69B3F53237BF37C008F7AA0 /* UIImage-Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F51237BF37C008F7AA0 /* UIImage-Color.swift */; };
+		F69B3F54237BF37C008F7AA0 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F52237BF37C008F7AA0 /* UIColor-Extension.swift */; };
+		F69B3F56237BF60A008F7AA0 /* NContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F55237BF60A008F7AA0 /* NContentViewController.swift */; };
+		F69B3F58237BFD1E008F7AA0 /* NBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F57237BFD1E008F7AA0 /* NBaseViewController.swift */; };
+		F69B3F5A237BFE85008F7AA0 /* NTopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F59237BFE85008F7AA0 /* NTopTableView.swift */; };
 		F6A000BC237ABF1800E7B27A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000BB237ABF1800E7B27A /* AppDelegate.swift */; };
 		F6A000BE237ABF1800E7B27A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000BD237ABF1800E7B27A /* SceneDelegate.swift */; };
 		F6A000C0237ABF1800E7B27A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000BF237ABF1800E7B27A /* ViewController.swift */; };
@@ -15,6 +29,7 @@
 		F6A000C8237ABF1900E7B27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A000C6237ABF1900E7B27A /* LaunchScreen.storyboard */; };
 		F6A000D3237ABF1900E7B27A /* SwiftKnowledgePointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000D2237ABF1900E7B27A /* SwiftKnowledgePointTests.swift */; };
 		F6A000DE237ABF1A00E7B27A /* SwiftKnowledgePointUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000DD237ABF1A00E7B27A /* SwiftKnowledgePointUITests.swift */; };
+		F6A000EC237ABFE000E7B27A /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000EB237ABFE000E7B27A /* PointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +50,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F6A000B8237ABF1800E7B27A /* SwiftKnowledgePoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftKnowledgePoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69B3F3F237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlPageCollectionViewLaout.swift; sourceTree = "<group>"; };
+		F69B3F40237BE9F9008F7AA0 /* NqwlTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlTitleView.swift; sourceTree = "<group>"; };
+		F69B3F41237BE9F9008F7AA0 /* NqwlPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlPageView.swift; sourceTree = "<group>"; };
+		F69B3F42237BE9F9008F7AA0 /* NqwlTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlTitleStyle.swift; sourceTree = "<group>"; };
+		F69B3F43237BE9F9008F7AA0 /* NqwlTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlTitleCell.swift; sourceTree = "<group>"; };
+		F69B3F44237BE9F9008F7AA0 /* NqwlPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlPageCollectionView.swift; sourceTree = "<group>"; };
+		F69B3F45237BE9F9008F7AA0 /* NqwlTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NqwlTitleCell.xib; sourceTree = "<group>"; };
+		F69B3F46237BE9F9008F7AA0 /* NqwlContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlContentView.swift; sourceTree = "<group>"; };
+		F69B3F4F237BF367008F7AA0 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		F69B3F51237BF37C008F7AA0 /* UIImage-Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage-Color.swift"; sourceTree = "<group>"; };
+		F69B3F52237BF37C008F7AA0 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		F69B3F55237BF60A008F7AA0 /* NContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NContentViewController.swift; sourceTree = "<group>"; };
+		F69B3F57237BFD1E008F7AA0 /* NBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBaseViewController.swift; sourceTree = "<group>"; };
+		F69B3F59237BFE85008F7AA0 /* NTopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTopTableView.swift; sourceTree = "<group>"; };
+		F6A000B8237ABF1800E7B27A /* Swift Coding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Coding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A000BB237ABF1800E7B27A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6A000BD237ABF1800E7B27A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F6A000BF237ABF1800E7B27A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +78,7 @@
 		F6A000D9237ABF1A00E7B27A /* SwiftKnowledgePointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftKnowledgePointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A000DD237ABF1A00E7B27A /* SwiftKnowledgePointUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKnowledgePointUITests.swift; sourceTree = "<group>"; };
 		F6A000DF237ABF1A00E7B27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6A000EB237ABFE000E7B27A /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +106,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F614B809237CE68000A9EBA6 /* NPageCtr */ = {
+			isa = PBXGroup;
+			children = (
+				F69B3F59237BFE85008F7AA0 /* NTopTableView.swift */,
+				F69B3F55237BF60A008F7AA0 /* NContentViewController.swift */,
+				F69B3F57237BFD1E008F7AA0 /* NBaseViewController.swift */,
+			);
+			path = NPageCtr;
+			sourceTree = "<group>";
+		};
+		F69B3F3E237BE9F9008F7AA0 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				F69B3F51237BF37C008F7AA0 /* UIImage-Color.swift */,
+				F69B3F3F237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift */,
+				F69B3F40237BE9F9008F7AA0 /* NqwlTitleView.swift */,
+				F69B3F41237BE9F9008F7AA0 /* NqwlPageView.swift */,
+				F69B3F42237BE9F9008F7AA0 /* NqwlTitleStyle.swift */,
+				F69B3F43237BE9F9008F7AA0 /* NqwlTitleCell.swift */,
+				F69B3F44237BE9F9008F7AA0 /* NqwlPageCollectionView.swift */,
+				F69B3F45237BE9F9008F7AA0 /* NqwlTitleCell.xib */,
+				F69B3F46237BE9F9008F7AA0 /* NqwlContentView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
 		F6A000AF237ABF1800E7B27A = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +145,7 @@
 		F6A000B9237ABF1800E7B27A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6A000B8237ABF1800E7B27A /* SwiftKnowledgePoint.app */,
+				F6A000B8237ABF1800E7B27A /* Swift Coding.app */,
 				F6A000CE237ABF1900E7B27A /* SwiftKnowledgePointTests.xctest */,
 				F6A000D9237ABF1A00E7B27A /* SwiftKnowledgePointUITests.xctest */,
 			);
@@ -99,9 +155,14 @@
 		F6A000BA237ABF1800E7B27A /* SwiftKnowledgePoint */ = {
 			isa = PBXGroup;
 			children = (
+				F614B809237CE68000A9EBA6 /* NPageCtr */,
 				F6A000BB237ABF1800E7B27A /* AppDelegate.swift */,
+				F69B3F52237BF37C008F7AA0 /* UIColor-Extension.swift */,
+				F69B3F4F237BF367008F7AA0 /* Common.swift */,
 				F6A000BD237ABF1800E7B27A /* SceneDelegate.swift */,
 				F6A000BF237ABF1800E7B27A /* ViewController.swift */,
+				F6A000EB237ABFE000E7B27A /* PointViewController.swift */,
+				F69B3F3E237BE9F9008F7AA0 /* PageView */,
 				F6A000C1237ABF1800E7B27A /* Main.storyboard */,
 				F6A000C4237ABF1900E7B27A /* Assets.xcassets */,
 				F6A000C6237ABF1900E7B27A /* LaunchScreen.storyboard */,
@@ -145,7 +206,7 @@
 			);
 			name = SwiftKnowledgePoint;
 			productName = SwiftKnowledgePoint;
-			productReference = F6A000B8237ABF1800E7B27A /* SwiftKnowledgePoint.app */;
+			productReference = F6A000B8237ABF1800E7B27A /* Swift Coding.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F6A000CD237ABF1900E7B27A /* SwiftKnowledgePointTests */ = {
@@ -234,6 +295,7 @@
 			files = (
 				F6A000C8237ABF1900E7B27A /* LaunchScreen.storyboard in Resources */,
 				F6A000C5237ABF1900E7B27A /* Assets.xcassets in Resources */,
+				F69B3F4D237BE9F9008F7AA0 /* NqwlTitleCell.xib in Resources */,
 				F6A000C3237ABF1800E7B27A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +321,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69B3F4E237BE9F9008F7AA0 /* NqwlContentView.swift in Sources */,
+				F69B3F54237BF37C008F7AA0 /* UIColor-Extension.swift in Sources */,
+				F69B3F53237BF37C008F7AA0 /* UIImage-Color.swift in Sources */,
+				F69B3F50237BF367008F7AA0 /* Common.swift in Sources */,
 				F6A000C0237ABF1800E7B27A /* ViewController.swift in Sources */,
+				F69B3F4B237BE9F9008F7AA0 /* NqwlTitleCell.swift in Sources */,
+				F69B3F48237BE9F9008F7AA0 /* NqwlTitleView.swift in Sources */,
+				F6A000EC237ABFE000E7B27A /* PointViewController.swift in Sources */,
+				F69B3F4A237BE9F9008F7AA0 /* NqwlTitleStyle.swift in Sources */,
 				F6A000BC237ABF1800E7B27A /* AppDelegate.swift in Sources */,
+				F69B3F58237BFD1E008F7AA0 /* NBaseViewController.swift in Sources */,
+				F69B3F5A237BFE85008F7AA0 /* NTopTableView.swift in Sources */,
 				F6A000BE237ABF1800E7B27A /* SceneDelegate.swift in Sources */,
+				F69B3F47237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift in Sources */,
+				F69B3F49237BE9F9008F7AA0 /* NqwlPageView.swift in Sources */,
+				F69B3F4C237BE9F9008F7AA0 /* NqwlPageCollectionView.swift in Sources */,
+				F69B3F56237BF60A008F7AA0 /* NContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +518,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nqwl.SwiftKnowledgePoint;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Swift Coding";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,7 +536,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nqwl.SwiftKnowledgePoint;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Swift Coding";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
