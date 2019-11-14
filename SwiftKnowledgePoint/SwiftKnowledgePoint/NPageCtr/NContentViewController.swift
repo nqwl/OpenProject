@@ -49,7 +49,7 @@ class NContentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "PageController"
+        navigationItem.title = "PageController"
         NotificationCenter.default.addObserver(self, selector: #selector(subScrollNotification(_:)), name: NSNotification.Name.SubScrollNotification, object: nil)
         self.contenTB.frame = CGRect.init(x: 0, y: kNavibarH, width: kScreenW, height: kScreenH-kNavibarH)
         self.view.addSubview(self.contenTB)

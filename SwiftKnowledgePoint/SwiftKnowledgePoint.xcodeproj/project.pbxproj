@@ -155,13 +155,13 @@
 		F6A000BA237ABF1800E7B27A /* SwiftKnowledgePoint */ = {
 			isa = PBXGroup;
 			children = (
-				F614B809237CE68000A9EBA6 /* NPageCtr */,
 				F6A000BB237ABF1800E7B27A /* AppDelegate.swift */,
 				F69B3F52237BF37C008F7AA0 /* UIColor-Extension.swift */,
 				F69B3F4F237BF367008F7AA0 /* Common.swift */,
 				F6A000BD237ABF1800E7B27A /* SceneDelegate.swift */,
 				F6A000BF237ABF1800E7B27A /* ViewController.swift */,
 				F6A000EB237ABFE000E7B27A /* PointViewController.swift */,
+				F614B809237CE68000A9EBA6 /* NPageCtr */,
 				F69B3F3E237BE9F9008F7AA0 /* PageView */,
 				F6A000C1237ABF1800E7B27A /* Main.storyboard */,
 				F6A000C4237ABF1900E7B27A /* Assets.xcassets */,
