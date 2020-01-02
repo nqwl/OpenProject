@@ -3,12 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A7539460EE6BEEBF50EA3E2 /* Pods_SwiftKnowledgePoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A63092CF44E28CDDD2927DC8 /* Pods_SwiftKnowledgePoint.framework */; };
+		7D8CD1115931F1E84C34E03B /* Pods_SwiftKnowledgePointTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0C1086D274CA4C6CAE2BB3 /* Pods_SwiftKnowledgePointTests.framework */; };
+		8AF14BB0901E6FEDDE076D32 /* Pods_SwiftKnowledgePoint_SwiftKnowledgePointUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C13B20866126507BB108D6 /* Pods_SwiftKnowledgePoint_SwiftKnowledgePointUITests.framework */; };
 		F6008E49237D4B6E00B8FF6E /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6008E48237D4B6E00B8FF6E /* EmojiViewController.swift */; };
 		F688AE142390AE790039ADE0 /* NSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F688AE132390AE790039ADE0 /* NSearchViewController.swift */; };
+		F6929E8E23BD7AF600BAD9A4 /* NTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6929E8D23BD7AF600BAD9A4 /* NTabBarVC.swift */; };
+		F6929E9123BD7ED500BAD9A4 /* NHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6929E9023BD7ED500BAD9A4 /* NHomeViewController.swift */; };
+		F6929E9423BD7F0000BAD9A4 /* NBaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6929E9323BD7F0000BAD9A4 /* NBaseNavViewController.swift */; };
 		F69B3F47237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F3F237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift */; };
 		F69B3F48237BE9F9008F7AA0 /* NqwlTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F40237BE9F9008F7AA0 /* NqwlTitleView.swift */; };
 		F69B3F49237BE9F9008F7AA0 /* NqwlPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F41237BE9F9008F7AA0 /* NqwlPageView.swift */; };
@@ -26,7 +32,6 @@
 		F6A000BC237ABF1800E7B27A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000BB237ABF1800E7B27A /* AppDelegate.swift */; };
 		F6A000BE237ABF1800E7B27A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000BD237ABF1800E7B27A /* SceneDelegate.swift */; };
 		F6A000C0237ABF1800E7B27A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000BF237ABF1800E7B27A /* ViewController.swift */; };
-		F6A000C3237ABF1800E7B27A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A000C1237ABF1800E7B27A /* Main.storyboard */; };
 		F6A000C5237ABF1900E7B27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A000C4237ABF1900E7B27A /* Assets.xcassets */; };
 		F6A000C8237ABF1900E7B27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A000C6237ABF1900E7B27A /* LaunchScreen.storyboard */; };
 		F6A000D3237ABF1900E7B27A /* SwiftKnowledgePointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000D2237ABF1900E7B27A /* SwiftKnowledgePointTests.swift */; };
@@ -52,8 +57,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4327AA3C398E4CAD9BC9900A /* Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A1738C96395DBDAFABFAB49 /* Pods-SwiftKnowledgePoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftKnowledgePoint.debug.xcconfig"; path = "Target Support Files/Pods-SwiftKnowledgePoint/Pods-SwiftKnowledgePoint.debug.xcconfig"; sourceTree = "<group>"; };
+		6605168D899E590C2FC320B9 /* Pods-SwiftKnowledgePoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftKnowledgePoint.release.xcconfig"; path = "Target Support Files/Pods-SwiftKnowledgePoint/Pods-SwiftKnowledgePoint.release.xcconfig"; sourceTree = "<group>"; };
+		676B2ED2D44D60604E56713F /* Pods-SwiftKnowledgePointTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftKnowledgePointTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftKnowledgePointTests/Pods-SwiftKnowledgePointTests.release.xcconfig"; sourceTree = "<group>"; };
+		A63092CF44E28CDDD2927DC8 /* Pods_SwiftKnowledgePoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftKnowledgePoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C13B20866126507BB108D6 /* Pods_SwiftKnowledgePoint_SwiftKnowledgePointUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftKnowledgePoint_SwiftKnowledgePointUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB0C1086D274CA4C6CAE2BB3 /* Pods_SwiftKnowledgePointTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftKnowledgePointTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6008E48237D4B6E00B8FF6E /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
 		F688AE132390AE790039ADE0 /* NSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSearchViewController.swift; sourceTree = "<group>"; };
+		F6929E8D23BD7AF600BAD9A4 /* NTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTabBarVC.swift; sourceTree = "<group>"; };
+		F6929E9023BD7ED500BAD9A4 /* NHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHomeViewController.swift; sourceTree = "<group>"; };
+		F6929E9323BD7F0000BAD9A4 /* NBaseNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBaseNavViewController.swift; sourceTree = "<group>"; };
 		F69B3F3F237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlPageCollectionViewLaout.swift; sourceTree = "<group>"; };
 		F69B3F40237BE9F9008F7AA0 /* NqwlTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlTitleView.swift; sourceTree = "<group>"; };
 		F69B3F41237BE9F9008F7AA0 /* NqwlPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlPageView.swift; sourceTree = "<group>"; };
@@ -68,11 +83,10 @@
 		F69B3F55237BF60A008F7AA0 /* NContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NContentViewController.swift; sourceTree = "<group>"; };
 		F69B3F57237BFD1E008F7AA0 /* NBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBaseViewController.swift; sourceTree = "<group>"; };
 		F69B3F59237BFE85008F7AA0 /* NTopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTopTableView.swift; sourceTree = "<group>"; };
-		F6A000B8237ABF1800E7B27A /* Swift Coding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Coding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A000B8237ABF1800E7B27A /* 斗鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A000BB237ABF1800E7B27A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6A000BD237ABF1800E7B27A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F6A000BF237ABF1800E7B27A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6A000C2237ABF1800E7B27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6A000C4237ABF1900E7B27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6A000C7237ABF1900E7B27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6A000C9237ABF1900E7B27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +97,8 @@
 		F6A000DD237ABF1A00E7B27A /* SwiftKnowledgePointUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKnowledgePointUITests.swift; sourceTree = "<group>"; };
 		F6A000DF237ABF1A00E7B27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6A000EB237ABFE000E7B27A /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
+		F8A2ABB4C41235FA803DC895 /* Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD8F36D9CF2EF4BC6D5BE0C4 /* Pods-SwiftKnowledgePointTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftKnowledgePointTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftKnowledgePointTests/Pods-SwiftKnowledgePointTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7539460EE6BEEBF50EA3E2 /* Pods_SwiftKnowledgePoint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8CD1115931F1E84C34E03B /* Pods_SwiftKnowledgePointTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +122,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF14BB0901E6FEDDE076D32 /* Pods_SwiftKnowledgePoint_SwiftKnowledgePointUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CD3114662766628B687BF86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A63092CF44E28CDDD2927DC8 /* Pods_SwiftKnowledgePoint.framework */,
+				E4C13B20866126507BB108D6 /* Pods_SwiftKnowledgePoint_SwiftKnowledgePointUITests.framework */,
+				EB0C1086D274CA4C6CAE2BB3 /* Pods_SwiftKnowledgePointTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA883E81C90242FC7B1B4A65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A1738C96395DBDAFABFAB49 /* Pods-SwiftKnowledgePoint.debug.xcconfig */,
+				6605168D899E590C2FC320B9 /* Pods-SwiftKnowledgePoint.release.xcconfig */,
+				F8A2ABB4C41235FA803DC895 /* Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.debug.xcconfig */,
+				4327AA3C398E4CAD9BC9900A /* Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.release.xcconfig */,
+				FD8F36D9CF2EF4BC6D5BE0C4 /* Pods-SwiftKnowledgePointTests.debug.xcconfig */,
+				676B2ED2D44D60604E56713F /* Pods-SwiftKnowledgePointTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F614B809237CE68000A9EBA6 /* NPageCtr */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +160,30 @@
 				F69B3F57237BFD1E008F7AA0 /* NBaseViewController.swift */,
 			);
 			path = NPageCtr;
+			sourceTree = "<group>";
+		};
+		F6929E8C23BD7AAD00BAD9A4 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				F6929E8D23BD7AF600BAD9A4 /* NTabBarVC.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		F6929E8F23BD7EBA00BAD9A4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F6929E9023BD7ED500BAD9A4 /* NHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F6929E9223BD7EDF00BAD9A4 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				F6929E9323BD7F0000BAD9A4 /* NBaseNavViewController.swift */,
+			);
+			path = Nav;
 			sourceTree = "<group>";
 		};
 		F69B3F3E237BE9F9008F7AA0 /* PageView */ = {
@@ -143,13 +209,15 @@
 				F6A000D1237ABF1900E7B27A /* SwiftKnowledgePointTests */,
 				F6A000DC237ABF1A00E7B27A /* SwiftKnowledgePointUITests */,
 				F6A000B9237ABF1800E7B27A /* Products */,
+				BA883E81C90242FC7B1B4A65 /* Pods */,
+				3CD3114662766628B687BF86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		F6A000B9237ABF1800E7B27A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6A000B8237ABF1800E7B27A /* Swift Coding.app */,
+				F6A000B8237ABF1800E7B27A /* 斗鱼.app */,
 				F6A000CE237ABF1900E7B27A /* SwiftKnowledgePointTests.xctest */,
 				F6A000D9237ABF1A00E7B27A /* SwiftKnowledgePointUITests.xctest */,
 			);
@@ -159,6 +227,9 @@
 		F6A000BA237ABF1800E7B27A /* SwiftKnowledgePoint */ = {
 			isa = PBXGroup;
 			children = (
+				F6929E9223BD7EDF00BAD9A4 /* Nav */,
+				F6929E8F23BD7EBA00BAD9A4 /* Home */,
+				F6929E8C23BD7AAD00BAD9A4 /* Tab */,
 				F6A000BB237ABF1800E7B27A /* AppDelegate.swift */,
 				F69B3F52237BF37C008F7AA0 /* UIColor-Extension.swift */,
 				F69B3F4F237BF367008F7AA0 /* Common.swift */,
@@ -169,7 +240,6 @@
 				F6A000EB237ABFE000E7B27A /* PointViewController.swift */,
 				F614B809237CE68000A9EBA6 /* NPageCtr */,
 				F69B3F3E237BE9F9008F7AA0 /* PageView */,
-				F6A000C1237ABF1800E7B27A /* Main.storyboard */,
 				F6A000C4237ABF1900E7B27A /* Assets.xcassets */,
 				F6A000C6237ABF1900E7B27A /* LaunchScreen.storyboard */,
 				F6A000C9237ABF1900E7B27A /* Info.plist */,
@@ -202,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6A000E2237ABF1A00E7B27A /* Build configuration list for PBXNativeTarget "SwiftKnowledgePoint" */;
 			buildPhases = (
+				30A2C946C486DFFD92254C84 /* [CP] Check Pods Manifest.lock */,
 				F6A000B4237ABF1800E7B27A /* Sources */,
 				F6A000B5237ABF1800E7B27A /* Frameworks */,
 				F6A000B6237ABF1800E7B27A /* Resources */,
+				12DE0F6ED19B2987F80F729F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,13 +284,14 @@
 			);
 			name = SwiftKnowledgePoint;
 			productName = SwiftKnowledgePoint;
-			productReference = F6A000B8237ABF1800E7B27A /* Swift Coding.app */;
+			productReference = F6A000B8237ABF1800E7B27A /* 斗鱼.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F6A000CD237ABF1900E7B27A /* SwiftKnowledgePointTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6A000E5237ABF1A00E7B27A /* Build configuration list for PBXNativeTarget "SwiftKnowledgePointTests" */;
 			buildPhases = (
+				CF997E7F52850F33CF7BB56B /* [CP] Check Pods Manifest.lock */,
 				F6A000CA237ABF1900E7B27A /* Sources */,
 				F6A000CB237ABF1900E7B27A /* Frameworks */,
 				F6A000CC237ABF1900E7B27A /* Resources */,
@@ -237,9 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6A000E8237ABF1A00E7B27A /* Build configuration list for PBXNativeTarget "SwiftKnowledgePointUITests" */;
 			buildPhases = (
+				E30CF5166732A16F87DA39C3 /* [CP] Check Pods Manifest.lock */,
 				F6A000D5237ABF1A00E7B27A /* Sources */,
 				F6A000D6237ABF1A00E7B27A /* Frameworks */,
 				F6A000D7237ABF1A00E7B27A /* Resources */,
+				312DEBAF431C1BDEF3E4232F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,7 +377,6 @@
 				F6A000C8237ABF1900E7B27A /* LaunchScreen.storyboard in Resources */,
 				F6A000C5237ABF1900E7B27A /* Assets.xcassets in Resources */,
 				F69B3F4D237BE9F9008F7AA0 /* NqwlTitleCell.xib in Resources */,
-				F6A000C3237ABF1800E7B27A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +396,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12DE0F6ED19B2987F80F729F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftKnowledgePoint/Pods-SwiftKnowledgePoint-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftKnowledgePoint/Pods-SwiftKnowledgePoint-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftKnowledgePoint/Pods-SwiftKnowledgePoint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30A2C946C486DFFD92254C84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftKnowledgePoint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		312DEBAF431C1BDEF3E4232F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF997E7F52850F33CF7BB56B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftKnowledgePointTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E30CF5166732A16F87DA39C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6A000B4237ABF1800E7B27A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -332,13 +509,16 @@
 				F69B3F53237BF37C008F7AA0 /* UIImage-Color.swift in Sources */,
 				F69B3F50237BF367008F7AA0 /* Common.swift in Sources */,
 				F6A000C0237ABF1800E7B27A /* ViewController.swift in Sources */,
+				F6929E8E23BD7AF600BAD9A4 /* NTabBarVC.swift in Sources */,
 				F69B3F4B237BE9F9008F7AA0 /* NqwlTitleCell.swift in Sources */,
 				F69B3F48237BE9F9008F7AA0 /* NqwlTitleView.swift in Sources */,
+				F6929E9123BD7ED500BAD9A4 /* NHomeViewController.swift in Sources */,
 				F6A000EC237ABFE000E7B27A /* PointViewController.swift in Sources */,
 				F69B3F4A237BE9F9008F7AA0 /* NqwlTitleStyle.swift in Sources */,
 				F6008E49237D4B6E00B8FF6E /* EmojiViewController.swift in Sources */,
 				F6A000BC237ABF1800E7B27A /* AppDelegate.swift in Sources */,
 				F69B3F58237BFD1E008F7AA0 /* NBaseViewController.swift in Sources */,
+				F6929E9423BD7F0000BAD9A4 /* NBaseNavViewController.swift in Sources */,
 				F688AE142390AE790039ADE0 /* NSearchViewController.swift in Sources */,
 				F69B3F5A237BFE85008F7AA0 /* NTopTableView.swift in Sources */,
 				F6A000BE237ABF1800E7B27A /* SceneDelegate.swift in Sources */,
@@ -381,14 +561,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F6A000C1237ABF1800E7B27A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6A000C2237ABF1800E7B27A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F6A000C6237ABF1900E7B27A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -516,42 +688,47 @@
 		};
 		F6A000E3237ABF1A00E7B27A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A1738C96395DBDAFABFAB49 /* Pods-SwiftKnowledgePoint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXRRLWEA5J;
 				INFOPLIST_FILE = SwiftKnowledgePoint/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nqwl.SwiftKnowledgePoint;
-				PRODUCT_NAME = "Swift Coding";
+				PRODUCT_NAME = "斗鱼";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F6A000E4237ABF1A00E7B27A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6605168D899E590C2FC320B9 /* Pods-SwiftKnowledgePoint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXRRLWEA5J;
 				INFOPLIST_FILE = SwiftKnowledgePoint/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nqwl.SwiftKnowledgePoint;
-				PRODUCT_NAME = "Swift Coding";
+				PRODUCT_NAME = "斗鱼";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		F6A000E6237ABF1A00E7B27A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD8F36D9CF2EF4BC6D5BE0C4 /* Pods-SwiftKnowledgePointTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -574,6 +751,7 @@
 		};
 		F6A000E7237ABF1A00E7B27A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 676B2ED2D44D60604E56713F /* Pods-SwiftKnowledgePointTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -596,6 +774,7 @@
 		};
 		F6A000E9237ABF1A00E7B27A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A2ABB4C41235FA803DC895 /* Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -616,6 +795,7 @@
 		};
 		F6A000EA237ABF1A00E7B27A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4327AA3C398E4CAD9BC9900A /* Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

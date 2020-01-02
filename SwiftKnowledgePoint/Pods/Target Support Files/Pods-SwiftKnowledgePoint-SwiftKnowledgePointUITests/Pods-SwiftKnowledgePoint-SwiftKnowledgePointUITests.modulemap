@@ -1,0 +1,6 @@
+framework module Pods_SwiftKnowledgePoint_SwiftKnowledgePointUITests {
+  umbrella header "Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -59,6 +59,9 @@ class NContentViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override var shouldAutorotate: Bool {
+        return false
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -79,7 +82,7 @@ class NContentViewController: UIViewController {
     func changeColor(_ color: UIColor, _ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         if offsetY >= 0 {
-            let alpha = offsetY/200 > 1.0 ? 1 : (offsetY/200)
+//            let alpha = offsetY/200 > 1.0 ? 1 : (offsetY/200)
         }
     }
 

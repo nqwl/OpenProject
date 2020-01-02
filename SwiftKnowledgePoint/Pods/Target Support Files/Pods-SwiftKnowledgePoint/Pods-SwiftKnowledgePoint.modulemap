@@ -1,0 +1,6 @@
+framework module Pods_SwiftKnowledgePoint {
+  umbrella header "Pods-SwiftKnowledgePoint-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -80,6 +80,7 @@ func kRGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
 
 // MARK:- 常用按钮颜色
 // 颜色参考 http://www.sioe.cn/yingyong/yanse-rgb-16/
+let kThemeMainColor = UIColor.init(hex: "0x920CDC")
 let kThemeWhiteColor = UIColor.init(hex: "0xFFFFFF")
 let kThemeWhiteSmokeColor = UIColor.init(hex: "0xFFFFFF")
 let kThemeMistyRoseColor = UIColor.init(hex: "0xFFE4E1")  // 薄雾玫瑰

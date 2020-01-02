@@ -12,7 +12,8 @@ class PointViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = kThemeWhiteColor
+
         // Do any additional setup after loading the view.
     }
     

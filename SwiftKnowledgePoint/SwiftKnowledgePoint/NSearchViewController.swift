@@ -27,28 +27,26 @@ class NSearchViewController: UIViewController {
     }();
     private lazy var headerView: UIView = {
         let view = UIView.init(frame: CGRect.zero)
-        view.backgroundColor = UIColor.init(hex: "0x000000", alpha: 0.3)
         return view
     }();
     private lazy var searchBtn: UIButton = {
         let searchBtn = UIButton.init(type: UIButton.ButtonType.custom)
-        searchBtn.backgroundColor = UIColor.white
+        searchBtn.backgroundColor = kThemeGainsboroColor
         searchBtn.layer.cornerRadius  = 17
         searchBtn.layer.masksToBounds = true
         searchBtn.setImage(UIImage.init(named: "icon_search"), for: UIControl.State.normal)
         searchBtn.setTitle("搜索", for: UIControl.State.normal)
-        searchBtn.setTitleColor(UIColor.lightText, for: UIControl.State.normal)
+        searchBtn.setTitleColor(kThemeGainsboroColor, for: UIControl.State.normal)
         return searchBtn
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = kThemeWhiteColor
         createUI()
         // Do any additional setup after loading the view.
     }
     func createUI() {
-        self.view.backgroundColor = UIColor.init(hex: "0x000000", alpha: 0.3)
-        self.contentTB.backgroundColor = UIColor.init(hex: "0x000000", alpha: 0.3)
         self.childScrollView.frame = self.view.bounds
         view.addSubview(self.childScrollView)
         self.headerView.frame  = CGRect.init(x: 0, y: -kNavibarH, width: kScreenW, height: headerHeight+kNavibarH)
