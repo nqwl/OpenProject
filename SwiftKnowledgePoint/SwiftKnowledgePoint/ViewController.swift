@@ -19,14 +19,14 @@ class ViewController: UIViewController {
         return tb
     }()
     lazy var dataArray : Array<String> = {
-        ["PageController","Swift基础知识点"]
+        ["PageController","Swift基础知识点","搜索"]
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Swift"
         self.view.addSubview(contenTB)
     }
-
+    
 
 }
 
@@ -50,6 +50,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         case 1:
             let pointVC = PointViewController()
             navigationController?.pushViewController(pointVC, animated: true)
+        case 2:
+            let searchVC = NSearchViewController()
+            navigationController?.pushViewController(searchVC, animated: true)
         default:
             break
         }

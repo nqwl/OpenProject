@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6008E49237D4B6E00B8FF6E /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6008E48237D4B6E00B8FF6E /* EmojiViewController.swift */; };
+		F688AE142390AE790039ADE0 /* NSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F688AE132390AE790039ADE0 /* NSearchViewController.swift */; };
 		F69B3F47237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F3F237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift */; };
 		F69B3F48237BE9F9008F7AA0 /* NqwlTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F40237BE9F9008F7AA0 /* NqwlTitleView.swift */; };
 		F69B3F49237BE9F9008F7AA0 /* NqwlPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69B3F41237BE9F9008F7AA0 /* NqwlPageView.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6008E48237D4B6E00B8FF6E /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
+		F688AE132390AE790039ADE0 /* NSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSearchViewController.swift; sourceTree = "<group>"; };
 		F69B3F3F237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlPageCollectionViewLaout.swift; sourceTree = "<group>"; };
 		F69B3F40237BE9F9008F7AA0 /* NqwlTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlTitleView.swift; sourceTree = "<group>"; };
 		F69B3F41237BE9F9008F7AA0 /* NqwlPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NqwlPageView.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				F69B3F4F237BF367008F7AA0 /* Common.swift */,
 				F6A000BD237ABF1800E7B27A /* SceneDelegate.swift */,
 				F6A000BF237ABF1800E7B27A /* ViewController.swift */,
+				F688AE132390AE790039ADE0 /* NSearchViewController.swift */,
+				F6008E48237D4B6E00B8FF6E /* EmojiViewController.swift */,
 				F6A000EB237ABFE000E7B27A /* PointViewController.swift */,
 				F614B809237CE68000A9EBA6 /* NPageCtr */,
 				F69B3F3E237BE9F9008F7AA0 /* PageView */,
@@ -330,8 +336,10 @@
 				F69B3F48237BE9F9008F7AA0 /* NqwlTitleView.swift in Sources */,
 				F6A000EC237ABFE000E7B27A /* PointViewController.swift in Sources */,
 				F69B3F4A237BE9F9008F7AA0 /* NqwlTitleStyle.swift in Sources */,
+				F6008E49237D4B6E00B8FF6E /* EmojiViewController.swift in Sources */,
 				F6A000BC237ABF1800E7B27A /* AppDelegate.swift in Sources */,
 				F69B3F58237BFD1E008F7AA0 /* NBaseViewController.swift in Sources */,
+				F688AE142390AE790039ADE0 /* NSearchViewController.swift in Sources */,
 				F69B3F5A237BFE85008F7AA0 /* NTopTableView.swift in Sources */,
 				F6A000BE237ABF1800E7B27A /* SceneDelegate.swift in Sources */,
 				F69B3F47237BE9F9008F7AA0 /* NqwlPageCollectionViewLaout.swift in Sources */,

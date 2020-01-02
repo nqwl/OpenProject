@@ -80,7 +80,6 @@ class NContentViewController: UIViewController {
         let offsetY = scrollView.contentOffset.y
         if offsetY >= 0 {
             let alpha = offsetY/200 > 1.0 ? 1 : (offsetY/200)
-            print(alpha)
         }
     }
 
@@ -95,7 +94,6 @@ extension NContentViewController: UIScrollViewDelegate {
             if (scrollView.contentOffset.y > self.headerHeight)||(self.childScrollView.contentOffset.y > 0) {
                 self.contenTB.contentOffset = CGPoint.init(x: 0, y: self.headerHeight);
             }
-            print(scrollView.contentOffset.y)
         }
     }
 }

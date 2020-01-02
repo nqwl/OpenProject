@@ -21,7 +21,6 @@ class NBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "多控制器管理"
         if #available(iOS 11.0, *) {
             self.contenTB.contentInsetAdjustmentBehavior = .never;
         }
