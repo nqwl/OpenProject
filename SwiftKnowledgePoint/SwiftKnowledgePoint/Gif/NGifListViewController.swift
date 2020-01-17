@@ -1,18 +1,17 @@
 //
-//  PointViewController.swift
+//  NGifListViewController.swift
 //  SwiftKnowledgePoint
 //
-//  Created by 陈辉 on 2019/11/12.
-//  Copyright © 2019 Nqwl. All rights reserved.
+//  Created by 陈辉 on 2020/1/8.
+//  Copyright © 2020 Nqwl. All rights reserved.
 //
 
 import UIKit
 
-class PointViewController: UIViewController {
+class NGifListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = kThemeWhiteColor
 
         // Do any additional setup after loading the view.
     }
