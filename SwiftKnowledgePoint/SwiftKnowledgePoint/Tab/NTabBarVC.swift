@@ -13,6 +13,15 @@ class NTabBarVC: UITabBarController {
         super.viewDidLoad()
         createChildController()
     }
+    override var shouldAutorotate: Bool {
+        self.selectedViewController?.shouldAutorotate ?? false
+    }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        self.selectedViewController?.supportedInterfaceOrientations ?? .portrait
+    }
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        self.selectedViewController?.preferredInterfaceOrientationForPresentation ?? .portrait
+    }
     /// 通过自定义方法添加所有子控制器
     func createChildController() {
         addChildVC(childVc: NHomeViewController(), title: "首页", image: "tab_home", selectedImage: "tab_home_sel")

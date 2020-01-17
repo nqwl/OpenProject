@@ -19,7 +19,7 @@ class NHomeViewController: UIViewController {
         return tb
     }()
     lazy var dataArray : Array<String> = {
-        ["PageController","Swift基础知识点","搜索"]
+        ["PageController","横竖屏控制"]
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +50,9 @@ extension NHomeViewController: UITableViewDelegate,UITableViewDataSource {
             let homeVC = NContentViewController()
             navigationController?.pushViewController(homeVC, animated: true)
         case 1:
-            let pointVC = PointViewController()
-            navigationController?.pushViewController(pointVC, animated: true)
-        case 2:
-            let searchVC = NSearchViewController()
-            navigationController?.pushViewController(searchVC, animated: true)
+            let screenVC = NScreenContrlVC()
+            navigationController?.pushViewController(screenVC, animated: true)
+      
         default:
             break
         }

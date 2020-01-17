@@ -28,7 +28,9 @@ class NBaseViewController: UIViewController {
         self.contenTB.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH-kNavibarH-44)
         self.view.addSubview(contenTB)
     }
-
+    override var shouldAutorotate: Bool {
+           return false
+    }
     deinit {
     }
 }

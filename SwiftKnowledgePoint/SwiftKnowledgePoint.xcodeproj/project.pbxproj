@@ -36,7 +36,14 @@
 		F6A000C8237ABF1900E7B27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A000C6237ABF1900E7B27A /* LaunchScreen.storyboard */; };
 		F6A000D3237ABF1900E7B27A /* SwiftKnowledgePointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000D2237ABF1900E7B27A /* SwiftKnowledgePointTests.swift */; };
 		F6A000DE237ABF1A00E7B27A /* SwiftKnowledgePointUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000DD237ABF1A00E7B27A /* SwiftKnowledgePointUITests.swift */; };
-		F6A000EC237ABFE000E7B27A /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A000EB237ABFE000E7B27A /* PointViewController.swift */; };
+		F6A521EA23C5AE250044CFEE /* NGifListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A521E923C5AE250044CFEE /* NGifListViewController.swift */; };
+		F6A521EC23C5AEBE0044CFEE /* NGifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A521EB23C5AEBE0044CFEE /* NGifCell.swift */; };
+		F6A521F323C5B2C80044CFEE /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6A521EE23C5B2C80044CFEE /* 4.gif */; };
+		F6A521F423C5B2C80044CFEE /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6A521EF23C5B2C80044CFEE /* 2.gif */; };
+		F6A521F523C5B2C80044CFEE /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6A521F023C5B2C80044CFEE /* 3.gif */; };
+		F6A521F623C5B2C80044CFEE /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6A521F123C5B2C80044CFEE /* 1.gif */; };
+		F6A521F723C5B2C80044CFEE /* 0.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6A521F223C5B2C80044CFEE /* 0.gif */; };
+		F6B8240523CBFEFB00D3EB02 /* NScreenContrlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8240423CBFEFB00D3EB02 /* NScreenContrlVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +103,14 @@
 		F6A000D9237ABF1A00E7B27A /* SwiftKnowledgePointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftKnowledgePointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A000DD237ABF1A00E7B27A /* SwiftKnowledgePointUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKnowledgePointUITests.swift; sourceTree = "<group>"; };
 		F6A000DF237ABF1A00E7B27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6A000EB237ABFE000E7B27A /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
+		F6A521E923C5AE250044CFEE /* NGifListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NGifListViewController.swift; sourceTree = "<group>"; };
+		F6A521EB23C5AEBE0044CFEE /* NGifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NGifCell.swift; sourceTree = "<group>"; };
+		F6A521EE23C5B2C80044CFEE /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
+		F6A521EF23C5B2C80044CFEE /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		F6A521F023C5B2C80044CFEE /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
+		F6A521F123C5B2C80044CFEE /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
+		F6A521F223C5B2C80044CFEE /* 0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 0.gif; sourceTree = "<group>"; };
+		F6B8240423CBFEFB00D3EB02 /* NScreenContrlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NScreenContrlVC.swift; sourceTree = "<group>"; };
 		F8A2ABB4C41235FA803DC895 /* Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests/Pods-SwiftKnowledgePoint-SwiftKnowledgePointUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD8F36D9CF2EF4BC6D5BE0C4 /* Pods-SwiftKnowledgePointTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftKnowledgePointTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftKnowledgePointTests/Pods-SwiftKnowledgePointTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +241,8 @@
 		F6A000BA237ABF1800E7B27A /* SwiftKnowledgePoint */ = {
 			isa = PBXGroup;
 			children = (
+				F6B8240323CBFED800D3EB02 /* ScreenControl */,
+				F6A521E823C5AE020044CFEE /* Gif */,
 				F6929E9223BD7EDF00BAD9A4 /* Nav */,
 				F6929E8F23BD7EBA00BAD9A4 /* Home */,
 				F6929E8C23BD7AAD00BAD9A4 /* Tab */,
@@ -237,7 +253,6 @@
 				F6A000BF237ABF1800E7B27A /* ViewController.swift */,
 				F688AE132390AE790039ADE0 /* NSearchViewController.swift */,
 				F6008E48237D4B6E00B8FF6E /* EmojiViewController.swift */,
-				F6A000EB237ABFE000E7B27A /* PointViewController.swift */,
 				F614B809237CE68000A9EBA6 /* NPageCtr */,
 				F69B3F3E237BE9F9008F7AA0 /* PageView */,
 				F6A000C4237ABF1900E7B27A /* Assets.xcassets */,
@@ -263,6 +278,36 @@
 				F6A000DF237ABF1A00E7B27A /* Info.plist */,
 			);
 			path = SwiftKnowledgePointUITests;
+			sourceTree = "<group>";
+		};
+		F6A521E823C5AE020044CFEE /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				F6A521ED23C5B2C80044CFEE /* GifResource */,
+				F6A521E923C5AE250044CFEE /* NGifListViewController.swift */,
+				F6A521EB23C5AEBE0044CFEE /* NGifCell.swift */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		F6A521ED23C5B2C80044CFEE /* GifResource */ = {
+			isa = PBXGroup;
+			children = (
+				F6A521EE23C5B2C80044CFEE /* 4.gif */,
+				F6A521EF23C5B2C80044CFEE /* 2.gif */,
+				F6A521F023C5B2C80044CFEE /* 3.gif */,
+				F6A521F123C5B2C80044CFEE /* 1.gif */,
+				F6A521F223C5B2C80044CFEE /* 0.gif */,
+			);
+			path = GifResource;
+			sourceTree = "<group>";
+		};
+		F6B8240323CBFED800D3EB02 /* ScreenControl */ = {
+			isa = PBXGroup;
+			children = (
+				F6B8240423CBFEFB00D3EB02 /* NScreenContrlVC.swift */,
+			);
+			path = ScreenControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,7 +419,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A521F523C5B2C80044CFEE /* 3.gif in Resources */,
+				F6A521F723C5B2C80044CFEE /* 0.gif in Resources */,
 				F6A000C8237ABF1900E7B27A /* LaunchScreen.storyboard in Resources */,
+				F6A521F423C5B2C80044CFEE /* 2.gif in Resources */,
+				F6A521F323C5B2C80044CFEE /* 4.gif in Resources */,
+				F6A521F623C5B2C80044CFEE /* 1.gif in Resources */,
 				F6A000C5237ABF1900E7B27A /* Assets.xcassets in Resources */,
 				F69B3F4D237BE9F9008F7AA0 /* NqwlTitleCell.xib in Resources */,
 			);
@@ -507,13 +557,15 @@
 				F69B3F4E237BE9F9008F7AA0 /* NqwlContentView.swift in Sources */,
 				F69B3F54237BF37C008F7AA0 /* UIColor-Extension.swift in Sources */,
 				F69B3F53237BF37C008F7AA0 /* UIImage-Color.swift in Sources */,
+				F6A521EA23C5AE250044CFEE /* NGifListViewController.swift in Sources */,
 				F69B3F50237BF367008F7AA0 /* Common.swift in Sources */,
+				F6A521EC23C5AEBE0044CFEE /* NGifCell.swift in Sources */,
 				F6A000C0237ABF1800E7B27A /* ViewController.swift in Sources */,
 				F6929E8E23BD7AF600BAD9A4 /* NTabBarVC.swift in Sources */,
 				F69B3F4B237BE9F9008F7AA0 /* NqwlTitleCell.swift in Sources */,
 				F69B3F48237BE9F9008F7AA0 /* NqwlTitleView.swift in Sources */,
 				F6929E9123BD7ED500BAD9A4 /* NHomeViewController.swift in Sources */,
-				F6A000EC237ABFE000E7B27A /* PointViewController.swift in Sources */,
+				F6B8240523CBFEFB00D3EB02 /* NScreenContrlVC.swift in Sources */,
 				F69B3F4A237BE9F9008F7AA0 /* NqwlTitleStyle.swift in Sources */,
 				F6008E49237D4B6E00B8FF6E /* EmojiViewController.swift in Sources */,
 				F6A000BC237ABF1800E7B27A /* AppDelegate.swift in Sources */,

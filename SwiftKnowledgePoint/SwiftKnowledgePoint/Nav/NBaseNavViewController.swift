@@ -15,6 +15,15 @@ class NBaseNavViewController: UINavigationController {
 
         // Do any additional setup after loading the view.
     }
+       override var shouldAutorotate: Bool {
+         self.topViewController?.shouldAutorotate ?? false
+     }
+     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+         self.topViewController?.supportedInterfaceOrientations ?? .portrait
+     }
+     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+         self.topViewController?.preferredInterfaceOrientationForPresentation ?? .portrait
+     }
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if self.children.count > 0 {
             viewController.hidesBottomBarWhenPushed = true

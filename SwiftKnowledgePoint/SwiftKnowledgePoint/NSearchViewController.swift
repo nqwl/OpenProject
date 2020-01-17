@@ -9,14 +9,6 @@
 import UIKit
 
 class NSearchViewController: UIViewController {
-    var alpha : CGFloat = 0
-    let headerHeight : CGFloat = 44
-    private lazy var childScrollView : UIScrollView = {
-        let scrollView = UIScrollView.init()
-        scrollView.isScrollEnabled = false
-        scrollView.delegate = self
-        return scrollView
-    }()
 
     private lazy var contentTB : NTopTableView = {
         let tableView = NTopTableView.init(frame: CGRect.zero, style: UITableView.Style.plain)
@@ -47,24 +39,16 @@ class NSearchViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func createUI() {
-        self.childScrollView.frame = self.view.bounds
-        view.addSubview(self.childScrollView)
-        self.headerView.frame  = CGRect.init(x: 0, y: -kNavibarH, width: kScreenW, height: headerHeight+kNavibarH)
-        self.searchBtn.frame  = CGRect.init(x: 10, y: kNavibarH + 5, width: kScreenW-20, height: 34)
-        self.headerView.addSubview(self.searchBtn)
-        self.childScrollView.addSubview(self.headerView)
-        contentTB.frame = CGRect.init(x: 0, y: headerHeight, width: kScreenW, height: kScreenH-headerHeight-kNavibarH)
-        self.childScrollView.addSubview(contentTB)
+        self.view.addSubview(contentTB)
+        contentTB.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = nil
     }
 }
 
@@ -74,15 +58,5 @@ extension NSearchViewController: UITableViewDataSource,UITableViewDelegate,UIScr
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
-    }
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        if offsetY <= headerHeight {
-            self.childScrollView.contentOffset = scrollView.contentOffset
-            self.contentTB.contentOffset  = CGPoint.zero
-        }
-    }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
     }
 }
